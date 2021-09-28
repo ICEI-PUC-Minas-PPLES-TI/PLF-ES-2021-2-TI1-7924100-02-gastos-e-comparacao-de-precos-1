@@ -1,50 +1,43 @@
 # Gerenciamento de Projeto
 
-> Descreva aqui a metodologia de trabalho do grupo para atacar o
-> problema.
-
+A metologia ágil será utilizada para fazer o controle das demandas e sprints ao longo do projeto. Serão feitas 1 ou 2 reuniões semanais para controle das tasks assim como um controle via kanban utilizando o Trello.
 ## Divisão de Papéis
 
-> Apresente a divisão de papéis entre os membros do grupo.
->
-> **Links Úteis**:
-> - [11 Passos Essenciais para Implantar Scrum no seu 
-> Projeto](https://mindmaster.com.br/scrum-11-passos/)
-> - [Scrum em 9 minutos](https://www.youtube.com/watch?v=XfvQWnRgxG0)
-
+> Ainda tem que ser adicionada
 ## Processo
 
-> Coloque  informações sobre detalhes da implementação do Scrum seguido
-> pelo grupo. O grupo poderá fazer uso de ferramentas on-line para acompanhar
-> o andamento do projeto, a execução das tarefas e o status de desenvolvimento
-> da solução.
-> 
-> **Links Úteis**:
-> - [Tutorial Trello](https://trello.com/b/8AygzjUA/tutorial-trello)
-> - [Gestão ágil de projetos com o Trello](https://www.youtube.com/watch?v=1o9BOMAKBRE)
-> - [Gerência de projetos - Trello com Scrum](https://www.youtube.com/watch?v=DHLA8X_ujwo)
-> - [Tutorial Slack](https://slack.com/intl/en-br/)
+O grupo irá utilizar o Trello para controlar o processo de tasks criadas. Cada taks irá implementar uma demanda priorizada ao longo dos dias da sprint. Cada task recebe uma priorização ou status:
+* Verde: Prioridade Baixa
+* Laranja: Prioridade Média
+* Vermelha: Prioridade Alta
+* Amarelo: Despriorizado > Task em andamento que foi despriorizada por conta de outra demanda
+* Roxo: Impedido > Task que foi paralizada por conta de uma dificuldade ou repriorização
+
+A distribuição das tasks serão feitas de acordo com a atuação de cada integrante em suas respectivas áreas.
+
+O status da demanda pode ser: **A fazer**, **Em andamento** e **Concluído**.
+
+As tasks devem possuir uma numeração única para cada demanda e no corpo do ticket deve possuir:
+* Objetivo: o que será implementado e em qual parte do sistema será implementado.
+* Complexidade: dificuldade da implementação da funcionalidade.
+* Escopo: qual área do sistema deve ser afetada, pode ser UI/UX, filtragem, login, etc...
+
+As reuniões serão feitas ao longo das semanas da sprint através do grupo no Teams no qual cada integrante irá dizer o que implementou, o que pretende implementar e se possui algum impedimento na sua demanda.
+
 
 ## Ferramentas
 
-As ferramentas empregadas no projeto são:
+### IDE
+A principal IDE utilizada será o Visual Studio Code no qual cada integrante ficará responsável por suas extensões instaladas.
 
-- Editor de código.
-- Ferramentas de comunicação
-- Ferramentas de diagramação
+### Controle de Versionamento
+O controle de versão do código pode ser escolhido pelos integrantes entre: GitBash (ou comandos inline), GitHub Desktop ou o gerenciador integrado do VS Code.
 
-O editor de código foi escolhido porque ele possui uma integração com o
-sistema de versão. As ferramentas de comunicação utilizadas possuem
-integração semelhante e por isso foram selecionadas. Por fim, para criar
-diagramas utilizamos essa ferramenta por melhor captar as
-necessidades da nossa solução.
+### Artefatos do Design Thinking
+A ferramenta utilizada foi o Miro por conta da possibilidade de contribuir com todos os integrantes de maneira paralela sem precisar se encontrar presencialmente.
 
-> Liste quais ferramentas foram empregadas no desenvolvimento do
-> projeto, justificando a escolha delas, sempre que possível.
-> 
-> **Possíveis Ferramentas que auxiliarão no gerenciamento**: 
-> - [![Slack](images/slack.jpg)](https://slack.com/)
-> - [![Trello](images/trello.png)](https://trello.com/)
-> 
-> - [![Microsof Project](images/project.png)](https://products.office.com/pt-br/project/project-and-portfolio-management-software)
-> - [![Redbooth](images/redbooth.png)](https://redbooth.com/)
+### Desenvolvimento da Interface
+A ferramenta utilizada para desenvolvimento da interface é o Figma por ter um controle de grupo e integrantes além de possibilitar a utilização de _widgets_ gratuitos.
+
+### Ferramenta para Reuniões
+As conversas entre os integrantes serão feitas através do canal do Teams, um servidor do Discord e um grupo no WhatsApp para alinhamentos mais rápidos.
