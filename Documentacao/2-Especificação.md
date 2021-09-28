@@ -28,7 +28,7 @@ alcançar.
 > personalizada todos os clientes ideais que sua solução almeja.
 
 > Persona base para desenvolvimento das demais:
-![alt](images\Spec\persona.jpg)
+![alt](images/Spec/persona.jpg)
 
 Carlos Alberto tem 32 anos, trabalha como funcionário público e tem o sonho de se
 aposentar cedo. Já é casado e possui 2 filhos. Passa boa parte do tempo do seu dia no
@@ -94,12 +94,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 ### Mural de possibilidades com as ideias propostas pela equipe
 <br/><br/>
-![Mural de Possibilidades](images\Spec\mural_possibilidades.jpg)
+![Mural de Possibilidades](images/Spec/mural_possibilidades.jpg)
 
 
 ### Mapa de priorização das demandas e funcionalidades
 <br/><br/>
-![Mapa de Priorização](images\Spec\mapa_priorizacao.jpg)
+![Mapa de Priorização](images/Spec/mapa_priorizacao.jpg)
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
