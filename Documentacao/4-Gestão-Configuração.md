@@ -1,47 +1,31 @@
 # Gestão de Configuração
 
-> Nesta parte do documento, você deve apresentar como foi realizada a
-> gestão de configuração do projeto. Isto é, como a ferramenta de
-> controle de versão foi configurada, bem como a hospedagem da
-> plataforma.
 
 ## Controle de Versão
 
-A ferramenta de controle de versão adotada no projeto foi o
-[Git](https://git-scm.com/), sendo que o [Github](https://github.com)
-foi utilizado para hospedagem do repositório `upstream`.
+O git será utilizado para controle das versões com o repositório sendo hospedado no [GitHub](https://github.com/ICEI-PUC-Minas-PPLES-TI/PLF-ES-2021-2-TI1-7924100-02-gastos-e-comparacao-de-precos-1)
 
 O projeto segue a seguinte convenção para o nome de branchs:
 
 - `master`: versão estável já testada do software
-- `unstable`: versão já testada do software, porém instável
-- `testing`: versão em testes do software
-- `dev`: versão de desenvolvimento do software
 
-Quanto à gerência de issues, o projeto adota a seguinte convenção para
-etiquetas:
+As demais branchs para desenvolvimento devem respeitar o padrão levando em conta os valores de tickets do Trello.
+- `develop-numero_task-descricao_breve`
+
+* Os commits sempre devem possuir o número e descrição do Trello atrelado ao corpo do commit.
+* Commits não devem ser feitos na master, devem ser sempre feitos em suas respectivas branches e mergeados na master.
+* Deve sempre haver aviso prévio por algum canal de comunicação conhecido pelo grupo informando que um merge na master está sendo feito.
+
+Quanto à gerência de issues, o projeto adota a seguinte convenção para etiquetas:
 
 - `bugfix`: uma funcionalidade encontra-se com problemas
 - `enhancement`: uma funcionalidade precisa ser melhorada
 - `feature`: uma nova funcionalidade precisa ser introduzida
 
-> Discuta como a configuração do projeto foi feita na ferramenta de
-> versionamento escolhida. Exponha como a gerência de tags, merges,
-> commits e branchs é realizada. Discuta como a gerência de issues foi
-> realizada.
->
-> **Links Úteis**:
-> - [Tutorial GitHub](https://guides.github.com/activities/hello-world/)
-> - [Git e Github](https://www.youtube.com/playlist?list=PLHz_AreHm4dm7ZULPAmadvNhH6vk9oNZA)
+Toda issue deve estar relacionada a um ticket no Trello, tanto as issues quanto os tickets devem ser geridos em sincronia. Ou seja,
+em ambos lugares a task tem que estar com o mesmo status.
 
 ## Hospedagem
 
-> Explique como a hospedagem e o lançamento da plataforma foi feita.
->
-> **Links Úteis**:
->
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Crie seu Site com o
->   HostGator](https://www.hostgator.com.br/como-publicar-seu-site)
-> - [GoDady](https://br.godaddy.com/how-to)
-> - [GitHub Pages](https://pages.github.com/)
+A hospedagem será feita no GitHub pages, aproveitando o repositório já existente do projeto e permitindo com que o GitHub 
+faça o controle do deploy das alterações que ocorrem na master sem precisar de um controle externo.
