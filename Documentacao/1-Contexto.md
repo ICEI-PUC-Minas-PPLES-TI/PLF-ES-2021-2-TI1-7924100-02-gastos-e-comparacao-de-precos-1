@@ -3,50 +3,24 @@
 ## Problema
 Como fazer para comparar preços de produtos a serem adquiridos em supermercados físicos e com isso realizar um maior controle dos gastos?
 
-
-
-> Nesse momento você deve apresentar o problema que a sua aplicação deve
-> resolver. No entanto, não é a hora de comentar sobre a aplicação.
-> Descreva também o contexto em que essa aplicação será usada, se
-> houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de
-> fato existir, pois ainda não é a hora de apresentar requisitos
-> detalhados ou projetos.
->
-> Nesse momento, o grupo pode optar por fazer uso
-> de ferramentas como Design Thinking, que permite um olhar de ponta a
-> ponta para o problema.
->
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
-
 ## Objetivos
-
-Desenvolver um software para auxiliar os consumidores na comparação de preços de produtos a serem adquiridos em supermercados (lojas físicas), individualmente ou a partir da elaboração de lista de compras, possibilitando um maior controle de gastos.
+Desenvolver um software para auxiliar os consumidores na comparação de preços de produtos a serem adquiridos em supermercados, individualmente ou a partir da elaboração de lista de compras, possibilitando um maior controle de gastos.
 
 Objetivos Específicos:
-- permitir que os consumidores informem o preço de produtos vendidos em supermercados (lojas físicas);
-- permitir que os consumidores comparem os preços de produtos vendidos em supermercados (lojas físicas), a partir dos dados fornecidos por outros consumidores;
+- permitir que os consumidores informem o preço de produtos vendidos em supermercados;
+- permitir que os consumidores comparem os preços de produtos vendidos em supermercados, a partir dos dados fornecidos por outros consumidores;
 - permitir que os consumidores elaborem listas com os produtos que costumam adquirir em supermercados e comparar os preços entre diversos estabelecimentos, a partir dos dados fornecidos por outros consumidores;
 
-
-> Aqui você deve descrever os objetivos do trabalho indicando que o
-> objetivo geral é desenvolver um software para solucionar o problema
-> apresentado acima. Apresente também alguns (pelo menos 2) objetivos
-> específicos dependendo de onde você vai querer concentrar a sua
-> prática investigativa, ou como você vai aprofundar no seu trabalho.
-> 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
-
 ## Justificativa
+O desenvolvimento deste software visa atender a demanda de pesquisa de preços por consumidores que regularmente realizam compras em supermercados para suprimento das necessidades da família, viabilizando assim melhor controle de gastos. 
 
-Dificuldade de realização de pesquisa de preço em produtos disponibilizados em estabelecimentos físicos
+Atualmente, para compras realizadas virtualmente, os consumidores possuem facilidade em comparar preços dos produtos. Embora as compras via internet estejam se intensificando, para alguns tipos de produtos, ainda prevalece a forma presencial. 
 
-O desenvolvimento deste software visa atender a demanda de pesquisa de preços por consumidores que regularmente realizam compras em supermercados (lojas físicas) para suprimento das necessidades da família, viabilizando assim melhor controle de gastos. 
+Em estudos iniciais de desenvolvimento deste software foram realizadas pesquisas nas quais apontaram que 48% da população entrevistada utiliza a maior parte de sua renda com alimentação.
 
-Atualmente, para compras realizadas virtualmente, os consumidores possuem facilidade em comparar preços dos produtos. Embora as compras via internet estejam se intensificando, para alguns tipos de produtos, ainda prevalece a forma presencial. Por exemplo, no que se refere a produtos alimentícios, de limpeza e higiene pessoal, a maioria das pessoas ainda prefere ir aos supermercados regularmente para fazer a compra. 
+![alt](images/Pesquisa/GraficoPesquisa.jpg)
+
+Por exemplo, no que se refere a produtos alimentícios, de limpeza e higiene pessoal, a maioria das pessoas ainda prefere ir aos supermercados regularmente para fazer a comprafoi visto que 40% da população entrevistada tem o seu maior gasto em pro
 
 Ocorre que, desta forma, a possibilidade de comparação de preços fica bastante limitada. Considerando a frequencia que a maioria das pessoas vai ao supermercado, as oscilações dos preços dos produtos comumente adquiridos nestes estabelecimentos e as dificuldades e custos inerentes ao deslocamento, o consumidor, muitas vezes, acaba comprando no local que lhe pareça mais conveniente ou mais barato, sem saber ao certo quanto pode estar gastando a mais ou a menos. 
 
@@ -71,12 +45,6 @@ Dessa forma, o objetivo é fornecer uma ferramenta simples que municie o consumi
 ## Público-Alvo
 
 - Consumidores, prioritariamente entre 25-50 anos de idade, de classe média, que regularmente realizam compras em supermercados (lojas físicas) para suprimento das necessidades da família. 
-
-ACRESCENTAR PERSONA E MAPA
-
-
-
-
 
 > Descreva quem serão as pessoas que usarão a sua aplicação indicando os
 > diferentes perfis. O objetivo aqui não é definir quem serão os
