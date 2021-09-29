@@ -8,6 +8,8 @@
 > funcionais e histórias de usuário abordados nas [Especificações do
 > Projeto](2-Especificação.md).
 
+
+
 ## User Flow
 
 ![Exemplo de UserFlow](images/userflow.jpg)
