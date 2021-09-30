@@ -33,13 +33,20 @@ Foram criadas cinco telas sendo a tela inicial a tela de "login", a tela "home"
 
 ## Wireframes
 
-![Exemplo de Wireframe](images/wireframe-example.png)
+[Link para o play do Marvel APP](https://marvelapp.com/prototype/77dcj27/screen/82328386)
 
-> São protótipos usados em design de interface para sugerir a
-> estrutura de um site web e seu relacionamentos entre suas
-> páginas. Um wireframe web é uma ilustração semelhante do
-> layout de elementos fundamentais na interface.
-> 
-> **Links Úteis**:
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
+>> Login
+![Wireframe da Tela de Login](images/Wireframes/login.jpg)
+
+>> Home
+![Wireframe da Home](images/Wireframes/home.jpg)
+
+>> Cadastramento
+![Wireframe da Home](images/Wireframes/cadastramento.jpg)
+
+>> Filtragem
+![Wireframe da Home](images/Wireframes/filtragem.jpg)
+
+>> Sobre
+![Wireframe da Home](images/Wireframes/sobre.jpg)
+
