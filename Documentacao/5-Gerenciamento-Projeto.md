@@ -1,15 +1,15 @@
 # Gerenciamento de Projeto
 
 A metologia ágil será utilizada para fazer o controle das demandas e sprints ao longo do projeto. Serão feitas 1 ou 2 reuniões semanais para controle das tasks assim como um controle via kanban utilizando o Trello.
+
 ## Divisão de Papéis
 
 
-- André Fernandez Mendes
-- Guilherme Dantas Caldeira Fagundes
-- Igor Pinheiro dos Santos
-- Leonardo Cesar da Silva
-- Matheus Belo Santos Mello
-
+- André Fernandez Mendes >> Cadastramento de Produtos / Montagem da Tela de Cadastramento
+- Guilherme Dantas Caldeira Fagundes >> Tela de login / Cadastramento de usuários
+- Igor Pinheiro dos Santos >> Montagem da Home e Plotagem de Gráfico
+- Leonardo Cesar da Silva >> Tela de Filtragem / Funcionamento da Filtragem e Exibição Dinâmica
+- Matheus Belo Santos Mello >>  Tela de Sobre / Funcionamento do Menu Superior
 
 ## Processo
 
