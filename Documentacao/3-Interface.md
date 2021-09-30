@@ -3,33 +3,14 @@
 
 <span style="color:red">Pré-requisitos: <a href="2-Especificação.md"> Documentação de Especificação</a></span>
 
-Foram criadas cinco telas sendo a tela inicial a tela de "login", a tela "home"
-
+O software a ser criado é uma aplicação web. Foram elaboradas cinco telas: "login", "home", "cadastramento", "filtragem" e "sobre". A tela inicial é a tela de login, na qual o usuário realiza o seu cadastro e o encaminha para a tela "home", na qual tem acesso às demais telas.
+Na tela cadastramento, o usuário poderá fazer o cadastramento do nome, valor e tipo do produto, além do nome do estabelecimento e a região na qual o estabelecimento está localizado.
+Na tela filtragem, o usuário consegue realizar a pesquisa de produtos por nome do estabelecimento e por nome do produto e ordenar o resultado da pesquisa por região e por preço.
+Na tela sobre, está localizada a descrição da aplicação e as informações sobre a equipe que desenvolveu o produto, os integrantes do grupo.
 
 ## User Flow
 
-
-![alt](images/Interface.png)
-
-
-
-
-> Apresente as principais a interface da plataforma. Discuta como ela
-> foi elaborada de forma a atender os requisitos funcionais, não
-> funcionais e histórias de usuário abordados nas [Especificações do
-> Projeto](2-Especificação.md).
-
-![Exemplo de UserFlow](images/userflow.jpg)
-
-> Fluxo de usuário (User Flow) é uma técnica que permite ao desenvolvedor
-> mapear todo fluxo de telas do site ou app. Essa técnica funciona
-> para alinhar os caminhos e as possíveis ações que o usuário pode
-> fazer junto com os membros de sua equipe.
->
-> **Links Úteis**:
-> - [User Flow: O Quê É e Como Fazer?](https://medium.com/7bits/fluxo-de-usu%C3%A1rio-user-flow-o-que-%C3%A9-como-fazer-79d965872534)
-> - [User Flow vs Site Maps](http://designr.com.br/sitemap-e-user-flow-quais-as-diferencas-e-quando-usar-cada-um/)
-
+![alt](images/Interface/Interface.png)
 
 ## Wireframes
 
