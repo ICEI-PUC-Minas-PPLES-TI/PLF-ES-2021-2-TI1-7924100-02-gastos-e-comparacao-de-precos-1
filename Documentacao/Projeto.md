@@ -5,15 +5,20 @@ Trabalho Interdisciplinar - Aplicacões Web
 
 `CURSO`
 
+Engenharia de Software
+
 `SEMESTRE`
+
+2º Semestre de 2021
 
 ## Participantes
 
 Os membros do grupo são: 
-- Fulano da Silva
-- Ciclano Albuquerque
-
-> Inclua a lista dos membros da equipe com seus nomes completos.
+* André Fernandez Mendes
+* Guilherme Dantas Caldeira Fagundes
+* Igor Pinheiro dos Santos
+* Leonardo Cesar da Silva
+* Matheus Belo Santos Mello
 
 # Estrutura do Documento
 
