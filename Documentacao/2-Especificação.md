@@ -5,7 +5,6 @@
 Nesse tópico serão apresentadas as personas, as histórias de usuários, os requisitos funcionais e não funcionais, assim como os projetos feitos no Miro para as estruturas, as funcionalidades e os alvos que o projeto pretende alcançar.
 
 ## Personas
-Persona base para desenvolvimento das demais:
 ![alt](images/Spec/persona.jpg)
 
 Carlos Alberto tem 32 anos, trabalha como funcionário público e tem o sonho de se
@@ -60,7 +59,8 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-009| Permitir filtragem de produtos por marca  | BAIXA |
 |RF-010| Calculadora básica  | BAIXA |
 
-
+### Mapas Conceituais
+![Mapa Conceituais](images/Spec/mapas_conceituais.jpg)
 
 ### Requisitos não Funcionais
 
