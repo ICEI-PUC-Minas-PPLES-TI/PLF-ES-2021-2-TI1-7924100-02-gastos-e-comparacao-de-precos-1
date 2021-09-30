@@ -3,7 +3,14 @@
 A metologia ágil será utilizada para fazer o controle das demandas e sprints ao longo do projeto. Serão feitas 1 ou 2 reuniões semanais para controle das tasks assim como um controle via kanban utilizando o Trello.
 ## Divisão de Papéis
 
-> Ainda tem que ser adicionada
+
+- André Fernandez Mendes
+- Guilherme Dantas Caldeira Fagundes
+- Igor Pinheiro dos Santos
+- Leonardo Cesar da Silva
+- Matheus Belo Santos Mello
+
+
 ## Processo
 
 O grupo irá utilizar o Trello para controlar o processo de tasks criadas. Cada taks irá implementar uma demanda priorizada ao longo dos dias da sprint. Cada task recebe uma priorização ou status:
