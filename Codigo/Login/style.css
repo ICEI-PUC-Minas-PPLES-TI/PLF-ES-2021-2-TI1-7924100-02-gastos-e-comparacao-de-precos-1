@@ -1,0 +1,15 @@
+.card {
+    border-radius: 1rem;
+}
+
+.vh-100 {
+    background-color: #80c460;
+}
+
+.img-fluid {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.mb-g, .register-label {
+    color: #393f81;
+}
