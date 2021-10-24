@@ -5,115 +5,144 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Cadastramento de Produtoss</title>
+    <title>Cadastramento de Produtos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="produtos.css" />
+    <link rel="stylesheet" href="/Codigo/Produtos/produtos.css" />
 </head>
 
 <body onload="init()">
-    <h1>Cadastramento de Produtos</h1>
-
-    <div class="container">
-        <div class="row">
-            <div id="msg" class="col-sm-10 offset-sm-1">
-                <!--<div class="alert alert-warning">Produto não encontrado.</div>-->
-            </div>
-        </div>
-
-        <form id="form-produto">
-            <div class="form-group row">
-                <div class="col-sm-2">
-                    <label for="inputId">Id</label>
-                    <input type="text" class="form-control" id="inputId" placeholder="ID" disabled />
-                </div>
-                <div class="col-sm-6">
-                    <label for="inputNome">Nome do Produto (*)</label>
-                    <input type="text" class="form-control" id="inputNome" required
-                        placeholder="Informe o nome do produto" />
-                </div>
-                <div class="col-sm-4">
-                    <label for="inputFabricante">Fabricante do Produto (*)</label>
-                    <input type="text" class="form-control" id="inputFabricante" required
-                        placeholder="Informe o fabricante do produto" />
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-6">
-                    <label for="inputCategoria">Categoria do Produto (*)</label>
-                    <select name="categoria" class="form-control" id="inputCategoria" required>
-                        <option value="">Informe a categoria do produto</option>
-                        <option value="hortifruti">Hortifruti</option>
-                        <option value="mercearia">Mercearia</option>
-                        <option value="limpeza">Limpeza</option>
-                        <option value="bebidas">Bebidas</option>
-                        <option value="laticiniosOvos">Laticínios e ovos</option>
-                        <option value="snacks">Snacks</option>
-                        <option value="padariaConfeitaria">Padaria e confeitaria</option>
-                        <option value="queijosFrios">Queijos e frios</option>
-                        <option value="açouguePeixaria">Açougue e peixaria</option>
-                        <option value="comidasProntas">Comidas prontas</option>
-                        <option value="cuidadoPessoal">Cuidado pessoal</option>
-                        <option value="cervejaDestilados">Cerveja e destilados</option>
-                        <option value="congeladosRefrigerados"> Congelados e refrigerados </option>
-                        <option value="adega">Adega</option>
-                        <option value="bebes">Bebês</option>
-                        <option value="pets">Pets</option>
-                        <option value="farmacia">Farmácia</option>
-                        <option value="casa">Casa</option>
-                        <option value="paraCabelos">Para os cabelos</option>
-                        <option value="papelaria">Papelaria</option>
-                        <option value="hobbies">Hobbies</option>
-                        <option value="moda">Moda</option>
-                        <option value="autopecas">Autopeças</option>
-                    </select>
-                </div>
-                <div class="col-sm-6">
-                    <label for="inputValor">Valor do Produto (*)</label>
-                    <input type="valor" class="form-control" id="inputValor" required placeholder="Informe o valor" />
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-4">
-                    <small>(*) Campos obrigatórios</small>
-                </div>
-            </div>
-            <div class="form-group row">
-                <div class="col-sm-12">
-                    <input type="button" class="btn btn-success" id="btnInsert" value="Inserir" />
-                    <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar" />
-                    <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir" />
-                    <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Formulário" />
-                </div>
-            </div>
-        </form>
-
-        <div class="row">
-            <div class="col-sm-12">
-                <table id="grid-produtos" class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Fabricante</th>
-                            <th scope="col">Categoria</th>
-                            <th scope="col">Valor</th>
-                        </tr>
-                    </thead>
-                    <tbody id="table-produtos">
-                        <tr>
-                            <td scope="row">1</td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+    <div class="titulo">
+        <h1>Cadastramento de Produtos</h1>
     </div>
+    <section class="vh-100">
+        <div class="container">
+            <div class="row align-items-start">
 
+                <!-- Primeira Coluna -->
+
+                <div class="col1">
+                    <form id="form-produto">
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <label for="inputId">Id</label>
+                                <input type="text" class="form-control" id="inputId" placeholder="ID" disabled />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <label for="inputNome">Nome do Produto (*)</label>
+                                <input type="text" class="form-control" id="inputNome" required
+                                    placeholder="Informe o nome do produto" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <label for="inputFabricante">Fabricante do Produto (*)</label>
+                                <input type="text" class="form-control" id="inputFabricante" required
+                                    placeholder="Informe o fabricante do produto" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <label for="inputCategoria">Categoria do Produto (*)</label>
+                                <select name="categoria" class="form-control" id="inputCategoria" required>
+                                    <option value="">Informe a categoria do produto</option>
+                                    <option value="hortifruti">Hortifruti</option>
+                                    <option value="mercearia">Mercearia</option>
+                                    <option value="limpeza">Limpeza</option>
+                                    <option value="bebidas">Bebidas</option>
+                                    <option value="laticiniosOvos">Laticínios e ovos</option>
+                                    <option value="snacks">Snacks</option>
+                                    <option value="padariaConfeitaria">Padaria e confeitaria</option>
+                                    <option value="queijosFrios">Queijos e frios</option>
+                                    <option value="açouguePeixaria">Açougue e peixaria</option>
+                                    <option value="comidasProntas">Comidas prontas</option>
+                                    <option value="cuidadoPessoal">Cuidado pessoal</option>
+                                    <option value="cervejaDestilados">Cerveja e destilados</option>
+                                    <option value="congeladosRefrigerados"> Congelados e refrigerados </option>
+                                    <option value="adega">Adega</option>
+                                    <option value="bebes">Bebês</option>
+                                    <option value="pets">Pets</option>
+                                    <option value="farmacia">Farmácia</option>
+                                    <option value="casa">Casa</option>
+                                    <option value="paraCabelos">Para os cabelos</option>
+                                    <option value="papelaria">Papelaria</option>
+                                    <option value="hobbies">Hobbies</option>
+                                    <option value="moda">Moda</option>
+                                    <option value="autopecas">Autopeças</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <label for="inputValor">Valor do Produto (*)</label>
+                                <input type="valor" class="form-control" id="inputValor" required
+                                    placeholder="Informe o valor" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <label for="inputAtualizado">Atualizado em (*)</label>
+                                <input type="atualizado" class="form-control" id="inputAtualizado" required
+                                    placeholder="Informe a data" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-6">
+                                <small>(*) Campos obrigatórios</small>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="button" class="btn btn-success" id="btnInsert" value="Inserir" />
+                                <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar" />
+                                <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir" />
+                                <input type="button" class="btn btn-secondary" id="btnClear"
+                                    value="Limpar Formulário" />
+                            </div>
+                        </div>
+                    </form>
+                    <div class="row">
+                        <div id="msg" class="col-sm-12">
+                            <!--<div class="alert alert-warning">Produto não encontrado.</div>-->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Segunda Coluna -->
+
+                <div class="col2">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <table id="grid-produtos" class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#</th>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Fabricante</th>
+                                        <th scope="col">Categoria</th>
+                                        <th scope="col">Valor</th>
+                                        <th scope="col">Atualizado em</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="table-produtos">
+                                    <tr>
+                                        <td scope="row">1</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
     <script src="/Codigo/Produtos/produtos.js"></script>
     <script>
@@ -129,6 +158,7 @@
                                                 <td>${produto.fabricante}</td>
                                                 <td>${produto.categoria}</td>
                                                 <td>${produto.valor}</td>
+                                                <td>${produto.atualizado}</td>
                                             </tr>`);
             }
         }
@@ -147,11 +177,14 @@
                 let campoFabricante = $("#inputFabricante").val();
                 let campoCategoria = $("#inputCategoria").val();
                 let campoValor = $("#inputValor").val();
+                let campoAtualizado = $("#inputAtualizado").val();
+
                 let produto = {
                     nome: campoNome,
                     fabricante: campoFabricante,
                     categoria: campoCategoria,
                     valor: campoValor,
+                    atuzliado: campoAtualizado
                 };
 
                 insertProduto(produto);
@@ -175,11 +208,13 @@
                 let campoFabricante = $("#inputFabricante").val();
                 let campoCategoria = $("#inputCategoria").val();
                 let campoValor = $("#inputValor").val();
+                let campoAtualizado = $("#inputAtualizado").val();
                 let produto = {
                     nome: campoNome,
                     fabricante: campoFabricante,
                     categoria: campoCategoria,
                     valor: campoValor,
+                    atualizado: campoAtualizado
                 };
 
                 updateProduto(parseInt(campoId), produto);
@@ -233,6 +268,7 @@
                 $("#inputFabricante").val(colunas[2].innerText);
                 $("#inputCategoria").val(colunas[3].innerText);
                 $("#inputValor").val(colunas[4].innerText);
+                $("#inputAtualizado").val(colunas[5].innerText);
             });
 
             exibeProdutos();

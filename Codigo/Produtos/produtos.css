@@ -1,3 +1,8 @@
+
+body{
+    background-color: #80c460;
+}
+
 label {
     font-weight: bolder;
 }
@@ -6,19 +11,76 @@ label {
     color: #80c460 !important;
     opacity: 3;
 }
+
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
     color:  #80c460 !important;
 }
+
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
     color:  #80c460 !important;
     opacity:  3;
  }
+
  h1 {
      text-align: center;
  }
+
  #msg {
      height: 60px;
  }
+
  #grid-produtos tbody {
      cursor: pointer;
- }
+}
+.btn {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.titulo{
+    background-color: #80c460;
+    width: 100%;
+    position: fixed;
+    margin: 0 auto;
+}
+
+.col1 {
+    background-color: whitesmoke;
+    position:fixed;
+    right:20px;
+    width: 20%;
+    margin-top: 60px;
+    padding: 5px;
+}
+ 
+.col2 {
+    background-color: whitesmoke;
+    float: left;
+    width: 80%;
+    margin-top: 60px;
+    padding: 5px;
+}
+
+
+  /* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other on smaller screens (600px wide or less) */
+@media screen and (max-width: 990px) {
+    .col1 {
+        width: 100%;
+        position:initial;
+        float: left;
+        width: 100%;
+        
+        margin: 0 5px;
+
+    }
+    .col2 {
+        width: 100%;
+    }
+}

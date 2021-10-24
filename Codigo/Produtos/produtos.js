@@ -93,7 +93,8 @@ function insertProduto(produto) {
         "nome": produto.nome,
         "fabricante": produto.fabricante,
         "categoria": produto.categoria,
-        "valor": produto.valor
+        "valor": produto.valor,
+        "atualizado": produto.atualizado
     };
 
     // Insere o novo objeto no array
@@ -112,7 +113,8 @@ function updateProduto(id, produto) {
     db.data[index].nome = produto.nome,
     db.data[index].fabricante = produto.fabricante,
     db.data[index].categoria = produto.categoria,
-    db.data[index].valor = produto.valor
+    db.data[index].valor = produto.valor,
+    db.data[index].atualizado = produto.atualizado
 
     displayMessage("Produto alterado com sucesso");
 
