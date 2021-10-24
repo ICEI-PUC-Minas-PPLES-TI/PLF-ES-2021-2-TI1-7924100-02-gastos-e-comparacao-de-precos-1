@@ -2,13 +2,19 @@
 <html lang="en">
 
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
   <link rel="stylesheet" href="./style.css" />
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Document</title>
+  <title>Save Money | Login</title>
 </head>
 
 <body>
@@ -26,7 +32,7 @@
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
 
-                <form>
+                <form id="form-login">
 
                   <div class="d-flex align-items-center mb-3 pb-1">
                     <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
@@ -50,31 +56,51 @@
                   </div>
 
                   <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block" data-toggle="modal" data-target="#modal-register"
-                      type="button">Não
+                    <button class="btn btn-dark btn-lg btn-block" data-bs-toggle="modal"
+                      data-bs-target="#modal-register" type="button">Não
                       possui uma conta? Registre-se!</button>
                   </div>
 
-                  <!-- Button trigger modal -->
-                  <button type="button" class="btn btn-primary" data-mdb-toggle="modal" data-mdb-target="#exampleModal">
-                    Launch demo modal
-                  </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                  <div class="modal fade" id="modal-register" tabindex="-1" aria-labelledby="modal-register"
                     aria-hidden="true">
                     <div class="modal-dialog">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                          <button type="button" class="btn-close" data-mdb-dismiss="modal" aria-label="Close"></button>
+                          <h5 class="modal-title" id="modal-register">Registre-se!</h5>
+                          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
                         </div>
-                        <div class="modal-body">...</div>
+                        <div class="modal-body">
+                          <form id="form-add-user">
+                            <div class="form-outline mb-3">
+                              <label for="form-email" class="form-label">Email</label>
+                              <input type="email" class="form-control form-control-lg" id="form-email" required>
+                              <span class="error-span" id="email-span"></span>
+                            </div>
+                            <div class="form-outline mb-3">
+                              <label for="form-name" class="form-label">Nome</label>
+                              <input type="text" class="form-control form-control-lg" id="form-name" required>
+                              <span class="error-span" id="name-span"></span>
+                            </div>
+                            <div class="form-outline mb-3">
+                              <label for="form-password" class="form-label">Senha</label>
+                              <input type="password" class="form-control form-control-lg" id="form-password" required>
+                              <span class="error-span" id="password-span"></span>
+                            </div>
+                            <div class="form-outline mb-3">
+                              <label for="form-password-rpt" class="form-label">Repetir Senha</label>
+                              <input type="password" class="form-control form-control-lg" id="form-password-rpt"
+                                required>
+                              <span class="error-span" id="password-rpt-span"></span>
+                            </div>
+                          </form>
+                        </div>
                         <div class="modal-footer">
-                          <button type="button" class="btn btn-secondary" data-mdb-dismiss="modal">
-                            Close
-                          </button>
-                          <button type="button" class="btn btn-primary">Save changes</button>
+                          <button type="button" id="close-modal" class="btn btn-danger"
+                            data-bs-dismiss="modal">Fechar</button>
+                          <button type="button" id='create-user' class="btn btn-success">Finalizar
+                            Registro</button>
                         </div>
                       </div>
                     </div>
@@ -93,3 +119,123 @@
 </body>
 
 </html>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+<script src="login.js"></script>
+<script>
+
+  function validateEmail() {
+
+    let email = document.getElementById("form-email").value
+
+    if (!email) {
+      document.getElementById('form-email').style.borderColor = 'red'
+      document.getElementById('form-email').style.backgroundColor = 'rgba(245,0,0, 0.2)'
+      document.getElementById("email-span").innerHTML = "O email é obrigatório!"
+      return false;
+    } else {
+      document.getElementById('form-email').style.borderColor = 'green'
+      document.getElementById('form-email').style.backgroundColor = 'rgba(0,245,0, 0.2)'
+      document.getElementById('email-span').innerHTML = ""
+      return true;
+    }
+  }
+
+  function validateName() {
+    let name = document.getElementById('form-name').value
+
+    if (!name) {
+      document.getElementById('form-name').style.borderColor = 'red'
+      document.getElementById('form-name').style.backgroundColor = 'rgba(245,0,0, 0.2)'
+      document.getElementById("name-span").innerHTML = "O nome é obrigatório!"
+      return false;
+    } else {
+      document.getElementById('form-name').style.borderColor = 'green'
+      document.getElementById('form-name').style.backgroundColor = 'rgba(0,245,0, 0.2)'
+      document.getElementById('name-span').innerHTML = ""
+      return true;
+    }
+  }
+
+  function validatePassword() {
+
+    let password = document.getElementById("form-password").value
+    let rptPassowrd = document.getElementById("form-password-rpt").value
+
+    let passwordSpan = document.getElementById('password-span')
+    let rptPasswordSpan = document.getElementById('password-rpt-span')
+
+    if (!password) {
+      document.getElementById('form-password').style.borderColor = 'red'
+      document.getElementById('form-password').style.backgroundColor = 'rgba(245,0,0, 0.2)'
+      passwordSpan.innerHTML = "A senha é obrigatória"
+    } else {
+      document.getElementById('form-password').style.borderColor = 'green'
+      document.getElementById('form-password').style.backgroundColor = 'rgba(0,245,0, 0.2)'
+      passwordSpan.innerHTML = ""
+    }
+
+    if (!rptPassowrd) {
+      document.getElementById('form-password-rpt').style.borderColor = 'red'
+      document.getElementById('form-password-rpt').style.backgroundColor = 'rgba(245,0,0, 0.2)'
+      rptPasswordSpan.innerHTML = "A repetição da senha é obrigatória"
+    } else {
+      rptPasswordSpan.innerHTML = ""
+    }
+
+    if (password && rptPassowrd) {
+      if (password == rptPassowrd) {
+        document.getElementById('form-password-rpt').style.borderColor = 'green'
+        document.getElementById('form-password-rpt').style.backgroundColor = 'rgba(0,245,0, 0.2)'
+        rptPasswordSpan.innerHTML = ""
+        return true;
+      } else {
+        rptPasswordSpan.innerHTML = "As senhas devem ser iguais"
+        return false;
+      }
+    }
+  }
+
+  function getNewUserData() {
+    event.preventDefault();
+    let emailValidation = validateEmail()
+    let nameValidation = validateName()
+    let passwordValidation = validatePassword()
+
+    let email = document.getElementById('form-email').value
+    let name = document.getElementById('form-name').value
+    let password = document.getElementById('form-password').value
+
+    if (emailValidation && nameValidation && passwordValidation) {
+      closeModal()
+      createUser(email, name, password, null);
+
+      $('#modal-register').modal('hide');
+    }
+  }
+
+  function closeModal() {
+
+    var elementsInput = document.getElementsByClassName('form-control')
+    var elementsSpan = document.getElementsByClassName('error-span')
+
+    Array.prototype.forEach.call(elementsSpan, (e) => {
+      e.innerHTML = ""
+    })
+
+    Array.prototype.forEach.call(elementsInput, (e) => {
+      e.value = null
+      e.style.backgroundColor = 'white'
+      e.style.borderColor = '#ced4da'
+    })
+
+  }
+
+
+  document.getElementById('close-modal').addEventListener("click", closeModal)
+  document.getElementById("create-user").addEventListener("click", getNewUserData)
+
+</script>
