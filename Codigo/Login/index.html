@@ -35,24 +35,24 @@
                 <form id="form-login">
 
                   <div class="d-flex align-items-center mb-3 pb-1">
-                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                    <i class="fas fa-cubes fa-2x me-3"></i>
                     <span class="h1 fw-bold mb-0">Save Money</span>
                   </div>
 
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Faça o login com a sua conta</h5>
 
                   <div class="form-outline mb-4">
-                    <input type="email" id="email" class="form-control form-control-lg" />
+                    <input type="email" id="email-login" class="form-control form-control-lg" />
                     <label class="form-label" for="email">Endereço de Email</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="password" id="password" class="form-control form-control-lg" />
+                    <input type="password" id="password-login" class="form-control form-control-lg" />
                     <label class="form-label" for="password">Senha</label>
                   </div>
 
                   <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block" type="button">Login</button>
+                    <button class="btn btn-dark btn-lg btn-block" id="login-button" type="button">Login</button>
                   </div>
 
                   <div class="pt-1 mb-4">
@@ -127,115 +127,9 @@
 <script src="login.js"></script>
 <script>
 
-  function validateEmail() {
-
-    let email = document.getElementById("form-email").value
-
-    if (!email) {
-      document.getElementById('form-email').style.borderColor = 'red'
-      document.getElementById('form-email').style.backgroundColor = 'rgba(245,0,0, 0.2)'
-      document.getElementById("email-span").innerHTML = "O email é obrigatório!"
-      return false;
-    } else {
-      document.getElementById('form-email').style.borderColor = 'green'
-      document.getElementById('form-email').style.backgroundColor = 'rgba(0,245,0, 0.2)'
-      document.getElementById('email-span').innerHTML = ""
-      return true;
-    }
-  }
-
-  function validateName() {
-    let name = document.getElementById('form-name').value
-
-    if (!name) {
-      document.getElementById('form-name').style.borderColor = 'red'
-      document.getElementById('form-name').style.backgroundColor = 'rgba(245,0,0, 0.2)'
-      document.getElementById("name-span").innerHTML = "O nome é obrigatório!"
-      return false;
-    } else {
-      document.getElementById('form-name').style.borderColor = 'green'
-      document.getElementById('form-name').style.backgroundColor = 'rgba(0,245,0, 0.2)'
-      document.getElementById('name-span').innerHTML = ""
-      return true;
-    }
-  }
-
-  function validatePassword() {
-
-    let password = document.getElementById("form-password").value
-    let rptPassowrd = document.getElementById("form-password-rpt").value
-
-    let passwordSpan = document.getElementById('password-span')
-    let rptPasswordSpan = document.getElementById('password-rpt-span')
-
-    if (!password) {
-      document.getElementById('form-password').style.borderColor = 'red'
-      document.getElementById('form-password').style.backgroundColor = 'rgba(245,0,0, 0.2)'
-      passwordSpan.innerHTML = "A senha é obrigatória"
-    } else {
-      document.getElementById('form-password').style.borderColor = 'green'
-      document.getElementById('form-password').style.backgroundColor = 'rgba(0,245,0, 0.2)'
-      passwordSpan.innerHTML = ""
-    }
-
-    if (!rptPassowrd) {
-      document.getElementById('form-password-rpt').style.borderColor = 'red'
-      document.getElementById('form-password-rpt').style.backgroundColor = 'rgba(245,0,0, 0.2)'
-      rptPasswordSpan.innerHTML = "A repetição da senha é obrigatória"
-    } else {
-      rptPasswordSpan.innerHTML = ""
-    }
-
-    if (password && rptPassowrd) {
-      if (password == rptPassowrd) {
-        document.getElementById('form-password-rpt').style.borderColor = 'green'
-        document.getElementById('form-password-rpt').style.backgroundColor = 'rgba(0,245,0, 0.2)'
-        rptPasswordSpan.innerHTML = ""
-        return true;
-      } else {
-        rptPasswordSpan.innerHTML = "As senhas devem ser iguais"
-        return false;
-      }
-    }
-  }
-
-  function getNewUserData() {
-    event.preventDefault();
-    let emailValidation = validateEmail()
-    let nameValidation = validateName()
-    let passwordValidation = validatePassword()
-
-    let email = document.getElementById('form-email').value
-    let name = document.getElementById('form-name').value
-    let password = document.getElementById('form-password').value
-
-    if (emailValidation && nameValidation && passwordValidation) {
-      closeModal()
-      createUser(email, name, password, null);
-
-      $('#modal-register').modal('hide');
-    }
-  }
-
-  function closeModal() {
-
-    var elementsInput = document.getElementsByClassName('form-control')
-    var elementsSpan = document.getElementsByClassName('error-span')
-
-    Array.prototype.forEach.call(elementsSpan, (e) => {
-      e.innerHTML = ""
-    })
-
-    Array.prototype.forEach.call(elementsInput, (e) => {
-      e.value = null
-      e.style.backgroundColor = 'white'
-      e.style.borderColor = '#ced4da'
-    })
-
-  }
-
-
   document.getElementById('close-modal').addEventListener("click", closeModal)
   document.getElementById("create-user").addEventListener("click", getNewUserData)
+
+  document.getElementById('login-button').addEventListener("click", verifyLogin)
 
 </script>
