@@ -6,70 +6,81 @@ var db_produtos_inicial = {
             "nome": "Café Tradicional",
             "fabricante": "3 Corações",
             "categoria": "Mercearia",
-            "valor": "R$ 7,39"
+            "valor": "R$ 7,39",
+            "atualizado em": "20/10/2021"
+
         },
         {
             "id": 2,
             "nome": "Suco de Maracujá",
             "fabricante": "Tial",
             "categoria": "Bebidas",
-            "valor": "R$ 5,39"
+            "valor": "R$ 5,39",
+            "atualizado em": "20/10/2021"
         },
         {
             "id": 3,
             "nome": "Leite Longa Vida Integral",
             "fabricante": "Cotochés",
             "categoria": "Laticínios e Ovos",
-            "valor": "R$ 3,58"
+            "valor": "R$ 3,58",
+            "atualizado em": "20/10/2021"
         },
         {
             "id": 4,
             "nome": "Leite Longa Vida Integral",
             "fabricante": "Cotochés",
             "categoria": "Laticínios e Ovos",
-            "valor": "R$ 4,29"
+            "valor": "R$ 4,29",
+            "atualizado em": "20/10/2021"
         },
         {
             "id": 5,
             "nome": "Requeijão Tradicional",
             "fabricante": "Itambé",
             "categoria": "Queijos e frios",
-            "valor": "R$ 9,49"
+            "valor": "R$ 9,49",
+            "atualizado em": "20/10/2021"
         },
         {
             "id": 6,
             "nome": "Requeijão Tradicional",
             "fabricante": "Itambé",
             "categoria": "Queijos e frios",
-            "valor": "R$ 9,39"
+            "valor": "R$ 9,39",
+            "atualizado em": "20/10/2021"
         },
         {
             "id": 7,
             "nome": "Pernil Suíno - Kg",
             "fabricante": "Supermercado BH",
             "categoria": "Açougue e peixaria",
-            "valor": "R$ 14,90"
+            "valor": "R$ 14,90",
+            "atualizado em": "20/10/2021"
         },
         {
             "id": 8,
             "nome": "Arroz Agulhinha - Tipo 1",
             "fabricante": "Supermercado BH",
             "categoria": "Mercearia",
-            "valor": "R$ 16,98"
+            "valor": "R$ 16,98",
+            "atualizado em": "20/10/2021"
         },
         {
             "id": 9,
             "nome": "Leite Longa Vida Integral",
             "fabricante": "Supermercado BH",
             "categoria": "Laticínios e Ovos",
-            "valor": "R$ 3,39"
+            "valor": "R$ 3,39",
+            "atualizado em": "20/10/2021"
         },
         {
             "id": 10,
             "nome": "Café Extra Forte",
             "fabricante": "Pilão",
             "categoria": "Mercearia",
-            "valor": "R$ 13,49"
+            "valor": "R$ 13,49",
+            "atualizado em": "20/10/2021"
         }
     ]
 }
