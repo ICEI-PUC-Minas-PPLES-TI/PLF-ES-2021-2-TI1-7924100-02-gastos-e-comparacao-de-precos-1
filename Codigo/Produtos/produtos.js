@@ -7,7 +7,7 @@ var db_produtos_inicial = {
             "fabricante": "3 Corações",
             "categoria": "Mercearia",
             "valor": "R$ 7,39",
-            "atualizado em": "20/10/2021"
+            "atualizado": "20/10/2021"
 
         },
         {
@@ -16,7 +16,7 @@ var db_produtos_inicial = {
             "fabricante": "Tial",
             "categoria": "Bebidas",
             "valor": "R$ 5,39",
-            "atualizado em": "20/10/2021"
+            "atualizado": "20/10/2021"
         },
         {
             "id": 3,
@@ -24,7 +24,7 @@ var db_produtos_inicial = {
             "fabricante": "Cotochés",
             "categoria": "Laticínios e Ovos",
             "valor": "R$ 3,58",
-            "atualizado em": "20/10/2021"
+            "atualizado": "20/10/2021"
         },
         {
             "id": 4,
@@ -32,7 +32,7 @@ var db_produtos_inicial = {
             "fabricante": "Cotochés",
             "categoria": "Laticínios e Ovos",
             "valor": "R$ 4,29",
-            "atualizado em": "20/10/2021"
+            "atualizado": "20/10/2021"
         },
         {
             "id": 5,
@@ -40,7 +40,7 @@ var db_produtos_inicial = {
             "fabricante": "Itambé",
             "categoria": "Queijos e frios",
             "valor": "R$ 9,49",
-            "atualizado em": "20/10/2021"
+            "atualizado": "20/10/2021"
         },
         {
             "id": 6,
@@ -48,7 +48,7 @@ var db_produtos_inicial = {
             "fabricante": "Itambé",
             "categoria": "Queijos e frios",
             "valor": "R$ 9,39",
-            "atualizado em": "20/10/2021"
+            "atualizado": "20/10/2021"
         },
         {
             "id": 7,
@@ -56,7 +56,7 @@ var db_produtos_inicial = {
             "fabricante": "Supermercado BH",
             "categoria": "Açougue e peixaria",
             "valor": "R$ 14,90",
-            "atualizado em": "20/10/2021"
+            "atualizado": "20/10/2021"
         },
         {
             "id": 8,
@@ -64,7 +64,7 @@ var db_produtos_inicial = {
             "fabricante": "Supermercado BH",
             "categoria": "Mercearia",
             "valor": "R$ 16,98",
-            "atualizado em": "20/10/2021"
+            "atualizado": "20/10/2021"
         },
         {
             "id": 9,
@@ -72,7 +72,7 @@ var db_produtos_inicial = {
             "fabricante": "Supermercado BH",
             "categoria": "Laticínios e Ovos",
             "valor": "R$ 3,39",
-            "atualizado em": "20/10/2021"
+            "atualizado": "20/10/2021"
         },
         {
             "id": 10,
@@ -80,7 +80,7 @@ var db_produtos_inicial = {
             "fabricante": "Pilão",
             "categoria": "Mercearia",
             "valor": "R$ 13,49",
-            "atualizado em": "20/10/2021"
+            "atualizado": "20/10/2021"
         }
     ]
 }
