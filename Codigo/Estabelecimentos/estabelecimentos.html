@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Cadastramento de Estabelecimentos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/Codigo/Estabelecimentos/estabelecimentos.css" />
+    <link rel="stylesheet" href="estabelecimentos.css" />
 </head>
 
 <body onload="init()">
@@ -85,7 +85,7 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="/Codigo/Estabelecimentos/estabelecimentos.js"></script>
+    <script src="estabelecimentos.js"></script>
     <script>
         function exibeEstabelecimentos() {
             // Remove todas as linhas do corpo da tabela
@@ -106,7 +106,7 @@
             // Adiciona funções para tratar os eventos
             $("#btnInsert").click(function () {
                 // Verfica se o formulário está preenchido corretamente
-                if (!$("#form-estabelecimento")[0].checkValidity()) {
+                if (!$("#form-estabelecimentos")[0].checkValidity()) {
                     displayMessage("Preencha o formulário corretamente.");
                     return;
                 }
