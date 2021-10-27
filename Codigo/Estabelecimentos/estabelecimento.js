@@ -14,15 +14,15 @@ var db_estabelecimento_inicial = {
         {
             "id": 3,
             "nome": "Supermercado Verdemar",
-            "regiao": "Sul"
+            "regiao": "Norte"
+        },
+        {
+            "id": 4,
+            "nome": "Supermercado SuperNosso",
+            "regiao": "Leste"
         },
         {
             "id": 5,
-            "nome": "Supermercado SuperNosso",
-            "regiao": "Sul"
-        },
-        {
-            "id": 6,
             "nome": "Supermecado BH",
             "regiao": "Oeste"
         },
