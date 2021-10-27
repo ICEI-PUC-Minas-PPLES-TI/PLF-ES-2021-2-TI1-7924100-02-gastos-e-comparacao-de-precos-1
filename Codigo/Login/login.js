@@ -19,26 +19,14 @@ function createUser(email, name, password, userType) {
 }
 
 function generateID() {
-  let id = Math.random() * Date.now();
+  let id = Math.round(Math.random() * Date.now());
   return id;
 }
 
-//
-//
-// Disciplina: Trabalho Interdisciplinar - Aplicações Web
-// Professor: Rommel Vieira Carneiro (rommelcarneiro@gmail.com)
-//
-// Código LoginApp utilizado como exemplo para alunos de primeiro período
-
-// Página inicial de Login
 const LOGIN_URL = "index.html";
-const HOME_URL = "home.html"
+const HOME_URL = "home.html";
 
-function startApp() {}
-
-// Inicializa o usuarioCorrente e banco de dados de usuários da aplicação de Login
 function startApp() {
-  // PARTE 1 - INICIALIZA USUARIOCORRENTE A PARTIR DE DADOS NO LOCAL STORAGE, CASO EXISTA
   currentUserJSON = sessionStorage.getItem("current_user");
   if (currentUserJSON) {
     current_user = JSON.parse(currentUserJSON);
@@ -50,8 +38,6 @@ function startApp() {
   }
 }
 
-
-// Apaga os dados do usuário corrente no sessionStorage
 function logout() {
   user = {};
   sessionStorage.setItem("usuarioCorrente", JSON.stringify(user));
@@ -76,26 +62,32 @@ function verifyLogin() {
   let emailInput = document.getElementById("email-login").value;
   let passwordInput = document.getElementById("password-login").value;
 
-  db_users = JSON.parse(localStorage.getItem('db_users'))
+  db_users = JSON.parse(localStorage.getItem("db_users"));
 
-  if(db_users.users.length == 0){
-    alert("Não existe uma combinação de email e senha registrados! Verifique os dados ou se cadastre no site caso ainda não tenha feito seu registro!")
-    return;
-  }
-
-  for (let i = 0; i < db_users.users.length; i++) {
-    let registredUser = db_users.users[i];
-    if (
-      emailInput == registredUser.email &&
-      passwordInput == registredUser.password
-    ) {
-      sessionStorage.setItem("current_user", JSON.stringify(registredUser))
-      window.location = HOME_URL
-      break;
-    } else {
+  if (emailInput == "" || passwordInput == "") {
+    alert("Preencha todos os campos para fazer o login!");
+  } else {
+    if (db_users.users.length == 0) {
       alert(
         "Não existe uma combinação de email e senha registrados! Verifique os dados ou se cadastre no site caso ainda não tenha feito seu registro!"
       );
+      return;
+    }
+
+    for (let i = 0; i < db_users.users.length; i++) {
+      let registredUser = db_users.users[i];
+      if (
+        emailInput == registredUser.email &&
+        passwordInput == registredUser.password
+      ) {
+        sessionStorage.setItem("current_user", JSON.stringify(registredUser));
+        window.location = HOME_URL;
+        break;
+      } else {
+        alert(
+          "Não existe uma combinação de email e senha registrados! Verifique os dados ou se cadastre no site caso ainda não tenha feito seu registro!"
+        );
+      }
     }
   }
 }
@@ -179,7 +171,7 @@ function validatePassword() {
 }
 
 function getNewUserData() {
-  preventDefault();
+  event.preventDefault();
   let emailValidation = validateEmail();
   let nameValidation = validateName();
   let passwordValidation = validatePassword();
@@ -211,5 +203,4 @@ function closeModal() {
   });
 }
 
-// Inicializa as estruturas utilizadas pelo LoginApp
 startApp();
