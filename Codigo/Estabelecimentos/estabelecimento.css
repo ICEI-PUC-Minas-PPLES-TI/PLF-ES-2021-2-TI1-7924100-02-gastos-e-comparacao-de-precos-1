@@ -3,14 +3,14 @@ label {
 }
 
 ::placeholder {
-    color: #80c460 !important;
+    
     opacity: 3;
 }
-::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:  #80c460 !important;
-}
+/*::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    
+
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:  #80c460 !important;
+    
     opacity:  3;
  }
  h1 {
@@ -22,3 +22,7 @@ label {
  #grid-produtos tbody {
      cursor: pointer;
  }
+
+ /*color: #80c460 !important;
+ color:  #80c460 !important;
+ color:  #80c460 !important;
