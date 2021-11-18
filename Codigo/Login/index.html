@@ -10,6 +10,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
+
+  <script src="login.js"></script>
   <link rel="stylesheet" href="./style.css" />
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -94,6 +96,14 @@
                                 required>
                               <span class="error-span" id="password-rpt-span"></span>
                             </div>
+                            <div class="form-outline mb-3">
+                              <label for="form-user-type" class="form-label">Tipo de Usuário</label>
+                              <select class="form-select" aria-label="User Type Select" id="form-user-type">
+                                <option value="1" selected>Comprador</option>
+                                <option value="2">Empreendedor</option>
+                              </select>
+                            </div>
+                            <div></div>
                           </form>
                         </div>
                         <div class="modal-footer">
@@ -122,9 +132,6 @@
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-
-<script src="login.js"></script>
 <script>
 
   document.getElementById('close-modal').addEventListener("click", closeModal)

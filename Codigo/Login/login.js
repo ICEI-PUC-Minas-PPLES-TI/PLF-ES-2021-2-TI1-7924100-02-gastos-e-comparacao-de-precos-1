@@ -1,21 +1,34 @@
 let db_users = {
-  users: [],
+  users: []
 };
 
 let current_user = {};
 
 function createUser(email, name, password, userType) {
-  let newUser = {
-    id: generateID(),
-    password: password,
-    name: name,
-    email: email,
-    userType: userType,
-  };
+  let usersLoaded = JSON.parse(localStorage.getItem('db_users')).users
+  let emailFound = false;
+  usersLoaded.forEach(e => {
+    if (e.email == email) {
+      alert('Já existe uma conta cadastrada com esse e-mail! Favor utilizar outro e-mail!')
+      emailFound = true;
+    }
+  });
 
-  db_users.users.push(newUser);
+  if(!emailFound){
+    let newUser = {
+      id: generateID(),
+      password: password,
+      name: name,
+      email: email,
+      user_type: userType,
+    };
 
-  localStorage.setItem("db_users", JSON.stringify(db_users));
+    db_users.users.push(newUser)
+    localStorage.setItem("db_users", JSON.stringify(db_users));
+    alert('Usuário cadastrado com sucesso!');
+    $("#modal-register").modal("hide");
+  }
+
 }
 
 function generateID() {
@@ -34,33 +47,22 @@ function startApp() {
 
   var usersJSON = localStorage.getItem("db_users");
   if (usersJSON) {
-    db_users = JSON.stringify(usersJSON);
+    db_users = JSON.parse(usersJSON);
+  } else {
+    localStorage.setItem("db_users", JSON.stringify(db_users))
   }
 }
 
 function logout() {
   user = {};
-  sessionStorage.setItem("usuarioCorrente", JSON.stringify(user));
+  sessionStorage.setItem("current_user", JSON.stringify(user));
   window.location = LOGIN_URL;
-}
-
-function addUser(nome, login, senha, email) {
-  let newId = generateUUID();
-  let usuario = {
-    id: newId,
-    login: login,
-    senha: senha,
-    nome: nome,
-    email: email,
-  };
-
-  db_usuarios.usuarios.push(usuario);
-  localStorage.setItem("db_usuarios", JSON.stringify(db_usuarios));
 }
 
 function verifyLogin() {
   let emailInput = document.getElementById("email-login").value;
   let passwordInput = document.getElementById("password-login").value;
+  let userFound = false;
 
   db_users = JSON.parse(localStorage.getItem("db_users"));
 
@@ -81,13 +83,15 @@ function verifyLogin() {
         passwordInput == registredUser.password
       ) {
         sessionStorage.setItem("current_user", JSON.stringify(registredUser));
+        userFound = true;
         window.location = HOME_URL;
-        break;
-      } else {
-        alert(
-          "Não existe uma combinação de email e senha registrados! Verifique os dados ou se cadastre no site caso ainda não tenha feito seu registro!"
-        );
       }
+    }
+
+    if(!userFound){
+      alert(
+        "Não existe uma combinação de email e senha registrados! Verifique os dados ou se cadastre no site caso ainda não tenha feito seu registro!"
+      );
     }
   }
 }
@@ -176,15 +180,14 @@ function getNewUserData() {
   let nameValidation = validateName();
   let passwordValidation = validatePassword();
 
-  let email = document.getElementById("form-email").value;
-  let name = document.getElementById("form-name").value;
-  let password = document.getElementById("form-password").value;
+  let email = document.getElementById("form-email").value
+  let name = document.getElementById("form-name").value
+  let password = document.getElementById("form-password").value
+  let userType = document.getElementById("form-user-type").value
 
   if (emailValidation && nameValidation && passwordValidation) {
     closeModal();
-    createUser(email, name, password, null);
-
-    $("#modal-register").modal("hide");
+    createUser(email, name, password, userType);
   }
 }
 

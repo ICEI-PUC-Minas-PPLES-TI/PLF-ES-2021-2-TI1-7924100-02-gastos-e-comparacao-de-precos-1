@@ -9,7 +9,20 @@
 </head>
 
 <body>
+    <h1>Essa home existe somente para intuito de teste do login!</h1>
     <button id="logout" type="submit"> Logout </button>
+    <br/>
+    <span id="message"></span>
+    <table id="table-users">
+        <thead>
+            <th>Nome</th>
+            <th>Email</th>
+        </thead>
+        <tbody id="elements">
+            
+        </tbody>
+        
+    </table>
 </body>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
@@ -18,6 +31,32 @@
 <script src="login.js"></script>
 <script>
     document.getElementById('logout').addEventListener('click', logout)
+    let currentUser = JSON.parse(sessionStorage.getItem('current_user'))
+    document.getElementById('message').innerHTML = `Olá, ${currentUser.name}`
+
+
+    function showUsers(){
+        let users = JSON.parse(localStorage.getItem('db_users', 'users')).users
+        console.log(users)
+        users.forEach(e => {
+            var row = document.createElement('tr')
+            var td1 = document.createElement('td')
+            var td2 = document.createElement('td')
+            
+            var name = document.createTextNode(e.name)
+            var email = document.createTextNode(e.email)
+
+            td1.appendChild(name)
+            td2.appendChild(email)
+
+            row.appendChild(td1)
+            row.appendChild(td2)
+
+            document.getElementById('table-users').appendChild(row)
+        });
+    }
+    
+    showUsers()
 </script>
 
 </html>
