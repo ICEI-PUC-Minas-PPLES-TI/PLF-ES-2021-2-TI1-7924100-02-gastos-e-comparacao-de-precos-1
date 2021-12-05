@@ -21,6 +21,9 @@ function createUser(email, name, password, userType) {
       name: name,
       email: email,
       user_type: userType,
+      phone_number: null,
+      city: null,
+      address: null
     };
 
     db_users.users.push(newUser)
