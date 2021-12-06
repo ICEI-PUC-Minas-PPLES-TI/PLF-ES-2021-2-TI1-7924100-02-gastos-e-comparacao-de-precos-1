@@ -1,0 +1,81 @@
+body {
+  font-family: 'Zilla Slab', serif;
+  text-align: center;
+  padding: 10px;
+}
+
+.perfil-id{
+  margin: 5px 30% ;
+}
+
+.container, h1 {
+  font-size: 30px;
+}
+
+p {
+  margin: 5 20px;
+  line-height: 1;
+  letter-spacing: 1px;
+  pointer-events: none;
+}
+
+h1 {
+  padding: 10px;
+}
+
+.pages {
+  position: relative;
+  text-align: center;
+  box-shadow: 8px 8px 0 0px #a5a4a4;;
+  border-radius: 20px;
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.page {
+  position: relative;
+  padding: 20px 30px 15px;
+  background: rgb(213, 223, 213);
+  border-radius: 15px;
+}
+
+.month, .day-name {
+  display: grid;
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.day {
+  font-size: 60px;
+  font-weight: 700;
+  margin: 0 0 15px;
+}
+
+.year {
+  font-size: 12px;
+  width: 100%;
+}
+
+.grid {
+  display: grid; 
+  grid-template-columns:1fr, 1fr; 
+  grid-gap: 20px; 
+  padding: 20px;
+}
+
+.card {
+  grid-column: 2; 
+}
+
+img {
+  width: 100px;
+}
+
+#btn_logout {
+  size: 15px;
+  text-align: center;
+  margin-left: 40%;
+  margin-right: 40%;
+  padding: 10px;
+}

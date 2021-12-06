@@ -37,7 +37,7 @@ function generateID() {
 }
 
 const LOGIN_URL = "index.html";
-const HOME_URL = "home.html";
+const HOME_URL = "../Home/index.html";
 
 function startApp() {
   currentUserJSON = sessionStorage.getItem("current_user");

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js">
+    </script>
+    <script>
+
+        if (!usuarioCorrente.login) {
+            window.location.href = LOGIN_URL;
+        }
+
+        function initPage() {
+
+            document.getElementById('btn_logout').addEventListener('click', logoutUser);
+
+            document.getElementById('nomeUsuario').innerHTML = usuarioCorrente.nome;
+
+        }
+
+        window.addEventListener('load', initPage);
+    </script>
+
+</head>
+
+<body>
+    <img src="imagens/sorriso.png" alt=""><br>
+    <h1>Você está conectado como <span id="nomeUsuario">, seja bem-vindo!</span></h1>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <script src=horario.js></script>
+                <h1 id="message"></h1>
+            </div>
+        </div>
+    </div>
+    <br>
+    <a href="../Controle de gastos/controle.html"><button
+            style="background: #a5a4a4; border-radius: 6px; padding: 15px; cursor: pointer; color: #fff; border: none; font-size: 16px;">
+            Acompanhar gastos </button></a>
+
+    <section class="grid">
+        <div class="calendar">
+            <div class="calendar2">
+                <div class="pages"></div>
+            </div>
+            <script src=calendario.js></script>
+        </div>
+
+        <button id="btn_logout">Efetuar Logout</button>
+
+    </section>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
