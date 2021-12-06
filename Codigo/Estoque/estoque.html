@@ -5,14 +5,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Cadastramento de Produtos</title>
+    <title>Estoque</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/Codigo/Produtos/produtos.css" />
+    <link rel="stylesheet" href="" />
 </head>
 
 <body onload="init()">
     <div class="titulo">
-        <h1>Cadastramento de Produtos</h1>
+        <h1>Estoque</h1>
     </div>
     <section class="vh-100">
         <div class="container">
@@ -21,7 +21,7 @@
                 <!-- Primeira Coluna -->
 
                 <div class="col1">
-                    <form id="form-produto">
+                    <form id="form-estoque">
                         <div class="form-group row">
                             <div class="col-sm-6">
                                 <label for="inputId">Id</label>
@@ -29,48 +29,36 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <div class="col-sm-12">
-                                <label for="inputNome">Nome do Produto (*)</label>
-                                <input type="text" class="form-control" id="inputNome" required
-                                    placeholder="Informe o nome do produto" />
+                            <div id="selectContainer" class="col-sm-12">
+                                <label for="inputProduto">Produto - Fabricante - Categoria (*)</label>
+                                <!-- <select name="Produto" id="selectProdutos" class="form-control" id="inputProduto" required> -->
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12" id="selectEstabelecimentoContainer">
+                                <label for="inputEstabelecimento">Estabelecimento (*)</label>
+
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12">
-                                <label for="inputFabricante">Fabricante do Produto (*)</label>
-                                <input type="text" class="form-control" id="inputFabricante" required
-                                    placeholder="Informe o fabricante do produto" />
+                                <label for="inputValor">Valor do Produto (*)</label>
+                                <input type="text" class="form-control" id="inputValor" required
+                                    placeholder="Informe o valor" />
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12">
-                                <label for="inputCategoria">Categoria do Produto (*)</label>
-                                <select name="Categoria" class="form-control" id="inputCategoria" required>
-                                    <option value="">Informe a categoria do produto</option>
-                                    <option value="Hortifruti">Hortifruti</option>
-                                    <option value="Mercearia">Mercearia</option>
-                                    <option value="Limpeza">Limpeza</option>
-                                    <option value="Bebidas">Bebidas</option>
-                                    <option value="Laticinios e ovos">Laticínios e ovos</option>
-                                    <option value="Snacks">Snacks</option>
-                                    <option value="Padaria e confeitaria">Padaria e confeitaria</option>
-                                    <option value="Queijos e frios">Queijos e frios</option>
-                                    <option value="Açougue e peixaria">Açougue e peixaria</option>
-                                    <option value="Comidas prontas">Comidas prontas</option>
-                                    <option value="Cuidado pessoal">Cuidado pessoal</option>
-                                    <option value="Cerveja e destilados">Cerveja e destilados</option>
-                                    <option value="Congelados e refrigerados"> Congelados e refrigerados </option>
-                                    <option value="Adega">Adega</option>
-                                    <option value="Bebês">Bebês</option>
-                                    <option value="Pets">Pets</option>
-                                    <option value="Farmácia">Farmácia</option>
-                                    <option value="Casa">Casa</option>
-                                    <option value="Para os cabelos">Para os cabelos</option>
-                                    <option value="Papelaria">Papelaria</option>
-                                    <option value="Hobbies">Hobbies</option>
-                                    <option value="Moda">Moda</option>
-                                    <option value="Autopeças">Autopeças</option>
-                                </select>
+                                <label for="inputQuantidade">Quantidade do produto (*)</label>
+                                <input type="text" class="form-control" id="inputQuantidade" required
+                                    placeholder="Informe a quantidade" />
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <label for="inputAtualizado">Atualizado em (*)</label>
+                                <input type="date" class="form-control" id="inputAtualizado" required
+                                    placeholder="Informe a data" />
                             </div>
                         </div>
                         <div class="form-group row">
@@ -83,7 +71,8 @@
                                 <input type="button" class="btn btn-success" id="btnInsert" value="Inserir" />
                                 <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar" />
                                 <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir" />
-                                <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Formulário" />
+                                <input type="button" class="btn btn-secondary" id="btnClear"
+                                    value="Limpar Formulário" />
                             </div>
                         </div>
                     </form>
@@ -99,18 +88,21 @@
                 <div class="col2">
                     <div class="row">
                         <div class="col-sm-12">
-                            <table id="grid-produtos" class="table table-striped">
+                            <table id="grid-estoque" class="table table-striped">
                                 <thead>
                                     <tr>
                                         <th scope="col">#</th>
-                                        <th scope="col">Nome</th>
-                                        <th scope="col">Fabricante</th>
-                                        <th scope="col">Categoria</th>
+                                        <th scope="col">Produto - Fabricante - Categoria</th>
+                                        <th scope="col">Estabelecimento</th>
+                                        <th scope="col">Valor</th>
+                                        <th scope="col">Quantidade</th>
+                                        <th scope="col">Atualizado em</th>
                                     </tr>
                                 </thead>
-                                <tbody id="table-produtos">
+                                <tbody id="table-estoque">
                                     <tr>
                                         <td scope="row">1</td>
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -125,19 +117,23 @@
         </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script src="/Codigo/Produtos/produtos.js"></script>
+    <script src="/Codigo/Estoque/estoque.js"></script>
+    <script src=""></script>
     <script>
-        function exibeProdutos() {
+        function exibeEstoque() {
             // Remove todas as linhas do corpo da tabela
-            $("#table-produtos").html("");
+            $("#table-estoque").html("");
 
             // Popula a tabela com os registros do banco de dados
             for (i = 0; i < db.data.length; i++) {
-                let produto = db.data[i];
-                $("#table-produtos").append(`<tr><td scope="row">${produto.id}</td>
-                                                <td>${produto.nome}</td>
-                                                <td>${produto.fabricante}</td>
-                                                <td>${produto.categoria}</td>
+                let estoque = db.data[i];
+                // console.log(estoque)
+                $("#table-estoque").append(`<tr><td scope="row">${estoque.id}</td>
+                                                <td>${estoque.produto}</td>
+                                                <td>${estoque.estabelecimento}</td>
+                                                <td>${estoque.valor}</td>
+                                                <td>${estoque.quantidade}</td>
+                                                <td>${estoque.atualizado}</td>
                                             </tr>`);
             }
         }
@@ -146,29 +142,33 @@
             // Adiciona funções para tratar os eventos
             $("#btnInsert").click(function () {
                 // Verfica se o formulário está preenchido corretamente
-                if (!$("#form-produto")[0].checkValidity()) {
+                if (!$("#form-estoque")[0].checkValidity()) {
                     displayMessage("Preencha o formulário corretamente.");
                     return;
                 }
 
                 // Obtem os valores dos campos do formulário
-                let campoNome = $("#inputNome").val();
-                let campoFabricante = $("#inputFabricante").val();
-                let campoCategoria = $("#inputCategoria").val();
+                let campoProduto = $("#selectProdutos").val();
+                let campoEstabelecimento = $("#selectEstabelecimento").val();
+                let campoValor = $("#inputValor").val();
+                let campoQuantidade = $("#inputQuantidade").val();
+                let campoAtualizado = $("#inputAtualizado").val();
 
-                let produto = {
-                    nome: campoNome,
-                    fabricante: campoFabricante,
-                    categoria: campoCategoria,
+                let estoque = {
+                    produto: campoProduto,
+                    estabelecimento: campoEstabelecimento,
+                    valor: campoValor,
+                    quantidade: campoQuantidade,
+                    atualizado: campoAtualizado
                 };
 
-                insertProduto(produto);
+                insertEstoque(estoque);
 
-                // Reexibe os produtos
-                exibeProdutos();
+                // Reexibe os produtos do estoque
+                exibeEstoque();
 
                 // Limpa o formulario
-                $("#form-produto")[0].reset();
+                $("#form-estoque")[0].reset();
             });
 
             // Intercepta o click do botão Alterar
@@ -179,45 +179,47 @@
                     displayMessage("Selecione um produto para ser alterado.");
                     return;
                 }
-                let campoNome = $("#inputNome").val();
-                let campoFabricante = $("#inputFabricante").val();
-                let campoCategoria = $("#inputCategoria").val();
+                let campoProduto = $("#selectProdutos").val();
+                let campoEstabelecimento = $("#selectEstabelecimento").val();
                 let campoValor = $("#inputValor").val();
+                let campoQuantidade = $("#inputQuantidade").val();
                 let campoAtualizado = $("#inputAtualizado").val();
-                let produto = {
-                    nome: campoNome,
-                    fabricante: campoFabricante,
-                    categoria: campoCategoria,
+                let estoque = {
+                    produto: campoProduto,
+                    estabelecimento: campoEstabelecimento,
+                    valor: campoValor,
+                    quantidade: campoQuantidade,
+                    atualizado: campoAtualizado
                 };
 
-                updateProduto(parseInt(campoId), produto);
+                updateEstoque(parseInt(campoId), estoque);
 
-                // Reexibe os produtos
-                exibeProdutos();
+                // Reexibe os produtos do estoque
+                exibeEstoque();
 
                 // Limpa o formulario
-                $("#form-produto")[0].reset();
+                $("#form-estoque")[0].reset();
             });
 
             // Intercepta o click do botão Excluir
             $("#btnDelete").click(function () {
                 let campoId = $("#inputId").val();
                 if (campoId == "") {
-                    displayMessage("Selecione um produto a ser excluído.");
+                    displayMessage("Selecione um produto a ser excluído do estoque.");
                     return;
                 }
-                deleteProduto(parseInt(campoId));
+                deleteEstoque(parseInt(campoId));
 
-                // Reexibe os produtos
-                exibeProdutos();
+                // Reexibe os produtos do estoque
+                exibeEstoque();
 
                 // Limpa o formulario
-                $("#form-produto")[0].reset();
+                $("#form-estoque")[0].reset();
             });
 
             // Intercepta o click do botão Listar Produtos
             $("#btnClear").click(function () {
-                $("#form-produto")[0].reset();
+                $("#form-estoque")[0].reset();
             });
 
             // Oculta a mensagem de aviso após alguns segundos
@@ -232,19 +234,20 @@
             });
 
             // Preenche o formulário quando o usuario clicar em uma linha da tabela
-            $("#grid-produtos").on("click", "tr", function (e) {
-                let linhaProduto = this;
-                colunas = linhaProduto.querySelectorAll("td");
+            $("#grid-estoque").on("click", "tr", function (e) {
+                let linhaEstoque = this;
+                colunas = linhaEstoque.querySelectorAll("td");
 
                 $("#inputId").val(colunas[0].innerText);
-                $("#inputNome").val(colunas[1].innerText);
-                $("#inputFabricante").val(colunas[2].innerText);
-                $("#inputCategoria").val(colunas[3].innerText);
+                $("#inputProduto").val(colunas[1].innerText);
+                $("#inputEstabelecimento").val(colunas[2].innerText);
+                $("#inputValor").val(colunas[3].innerText);
+                $("#inputQuantidade").val(colunas[4].innerText);
+                $("#inputAtualizado").val(colunas[5].innerText);
             });
 
-            exibeProdutos();
+            exibeEstoque();
         }
     </script>
 </body>
-
 </html>
