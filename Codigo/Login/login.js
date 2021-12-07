@@ -56,12 +56,6 @@ function startApp() {
   }
 }
 
-function logout() {
-  user = {};
-  sessionStorage.setItem("current_user", JSON.stringify(user));
-  window.location = LOGIN_URL;
-}
-
 function verifyLogin() {
   let emailInput = document.getElementById("email-login").value;
   let passwordInput = document.getElementById("password-login").value;
