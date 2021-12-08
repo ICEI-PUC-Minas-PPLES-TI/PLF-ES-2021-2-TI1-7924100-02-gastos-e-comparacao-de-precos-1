@@ -1,23 +1,18 @@
-
-body{
-    background-color: #80c460;
-}
-
 label {
     font-weight: bolder;
 }
 
 ::placeholder {
-    color: #80c460 !important;
+    color: #212529 !important;
     opacity: 3;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color:  #80c460 !important;
+    color:  #212529 !important;
 }
 
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-    color:  #80c460 !important;
+    color:  #212529 !important;
     opacity:  3;
  }
 
@@ -38,26 +33,28 @@ label {
 }
 
 .titulo{
-    background-color: #80c460;
+    background-color: #21252994;
     width: 100%;
-    position: fixed;
     margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+.col1-container {
+    margin: auto;
+    display: flex;
 }
 
 .col1 {
-    background-color: whitesmoke;
-    position:fixed;
-    left:80%;
-    width: 20%;
-    margin-top: 60px;
     padding: 5px;
+    display: flex;
+    width: 100%;
+}
+
+#form-produto {
+    width: 100%;
 }
  
 .col2 {
-    background-color: whitesmoke;
-    float: left;
-    width: 80%;
-    margin-top: 60px;
     padding: 5px;
 }
 

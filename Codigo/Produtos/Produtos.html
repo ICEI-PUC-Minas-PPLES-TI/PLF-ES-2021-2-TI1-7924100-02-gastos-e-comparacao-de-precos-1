@@ -11,88 +11,121 @@
 </head>
 
 <body onload="init()">
-    <div class="titulo">
-        <h1>Cadastramento de Produtos</h1>
-    </div>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="">Save Money</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collaps d-flex" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Produtos/Produtos.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="../Estabelecimentos/Estabelecimentos.html">Estabelecimentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Estoque/estoque.html">Estoque</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Controle de gastos/index.html">Controle
+                            de Gastos</a>
+                    </li>
+                </ul>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <section class="vh-100">
+        <div class="titulo">
+            <h1>Cadastramento de Produtos</h1>
+        </div>
         <div class="container">
-            <div class="row align-items-start">
+            <div class="row">
 
                 <!-- Primeira Coluna -->
-
-                <div class="col1">
-                    <form id="form-produto">
-                        <div class="form-group row">
-                            <div class="col-sm-6">
-                                <label for="inputId">Id</label>
-                                <input type="text" class="form-control" id="inputId" placeholder="ID" disabled />
+                <div class="col1-container">
+                    <div class="col1">
+                        <form id="form-produto">
+                            <div class="form-group row">
+                                <div class="col-sm-6">
+                                    <label for="inputId">Id</label>
+                                    <input type="text" class="form-control" id="inputId" placeholder="ID" disabled />
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-12">
-                                <label for="inputNome">Nome do Produto (*)</label>
-                                <input type="text" class="form-control" id="inputNome" required
-                                    placeholder="Informe o nome do produto" />
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <label for="inputNome">Nome do Produto (*)</label>
+                                    <input type="text" class="form-control" id="inputNome" required
+                                        placeholder="Informe o nome do produto" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-12">
-                                <label for="inputFabricante">Fabricante do Produto (*)</label>
-                                <input type="text" class="form-control" id="inputFabricante" required
-                                    placeholder="Informe o fabricante do produto" />
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <label for="inputFabricante">Fabricante do Produto (*)</label>
+                                    <input type="text" class="form-control" id="inputFabricante" required
+                                        placeholder="Informe o fabricante do produto" />
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-12">
-                                <label for="inputCategoria">Categoria do Produto (*)</label>
-                                <select name="Categoria" class="form-control" id="inputCategoria" required>
-                                    <option value="">Informe a categoria do produto</option>
-                                    <option value="Hortifruti">Hortifruti</option>
-                                    <option value="Mercearia">Mercearia</option>
-                                    <option value="Limpeza">Limpeza</option>
-                                    <option value="Bebidas">Bebidas</option>
-                                    <option value="Laticinios e ovos">Laticínios e ovos</option>
-                                    <option value="Snacks">Snacks</option>
-                                    <option value="Padaria e confeitaria">Padaria e confeitaria</option>
-                                    <option value="Queijos e frios">Queijos e frios</option>
-                                    <option value="Açougue e peixaria">Açougue e peixaria</option>
-                                    <option value="Comidas prontas">Comidas prontas</option>
-                                    <option value="Cuidado pessoal">Cuidado pessoal</option>
-                                    <option value="Cerveja e destilados">Cerveja e destilados</option>
-                                    <option value="Congelados e refrigerados"> Congelados e refrigerados </option>
-                                    <option value="Adega">Adega</option>
-                                    <option value="Bebês">Bebês</option>
-                                    <option value="Pets">Pets</option>
-                                    <option value="Farmácia">Farmácia</option>
-                                    <option value="Casa">Casa</option>
-                                    <option value="Para os cabelos">Para os cabelos</option>
-                                    <option value="Papelaria">Papelaria</option>
-                                    <option value="Hobbies">Hobbies</option>
-                                    <option value="Moda">Moda</option>
-                                    <option value="Autopeças">Autopeças</option>
-                                </select>
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <label for="inputCategoria">Categoria do Produto (*)</label>
+                                    <select name="Categoria" class="form-control" id="inputCategoria" required>
+                                        <option value="">Informe a categoria do produto</option>
+                                        <option value="Hortifruti">Hortifruti</option>
+                                        <option value="Mercearia">Mercearia</option>
+                                        <option value="Limpeza">Limpeza</option>
+                                        <option value="Bebidas">Bebidas</option>
+                                        <option value="Laticinios e ovos">Laticínios e ovos</option>
+                                        <option value="Snacks">Snacks</option>
+                                        <option value="Padaria e confeitaria">Padaria e confeitaria</option>
+                                        <option value="Queijos e frios">Queijos e frios</option>
+                                        <option value="Açougue e peixaria">Açougue e peixaria</option>
+                                        <option value="Comidas prontas">Comidas prontas</option>
+                                        <option value="Cuidado pessoal">Cuidado pessoal</option>
+                                        <option value="Cerveja e destilados">Cerveja e destilados</option>
+                                        <option value="Congelados e refrigerados"> Congelados e refrigerados </option>
+                                        <option value="Adega">Adega</option>
+                                        <option value="Bebês">Bebês</option>
+                                        <option value="Pets">Pets</option>
+                                        <option value="Farmácia">Farmácia</option>
+                                        <option value="Casa">Casa</option>
+                                        <option value="Para os cabelos">Para os cabelos</option>
+                                        <option value="Papelaria">Papelaria</option>
+                                        <option value="Hobbies">Hobbies</option>
+                                        <option value="Moda">Moda</option>
+                                        <option value="Autopeças">Autopeças</option>
+                                    </select>
+                                </div>
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-6">
-                                <small>(*) Campos obrigatórios</small>
+                            <div class="form-group row">
                             </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="col-sm-12">
-                                <input type="button" class="btn btn-success" id="btnInsert" value="Inserir" />
-                                <input type="button" class="btn btn-warning" id="btnUpdate" value="Alterar" />
-                                <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir" />
-                                <input type="button" class="btn btn-secondary" id="btnClear" value="Limpar Formulário" />
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <input type="button" class="btn btn-dark" id="btnInsert" value="Inserir" />
+                                    <input type="button" class="btn btn-primary" id="btnUpdate" value="Alterar" />
+                                    <input type="button" class="btn btn-danger" id="btnDelete" value="Excluir" />
+                                    <input type="button" class="btn btn-secondary" id="btnClear"
+                                        value="Limpar Formulário" />
+                                </div>
                             </div>
-                        </div>
-                    </form>
-                    <div class="row">
-                        <div id="msg" class="col-sm-12">
-                            <!--<div class="alert alert-warning">Produto não encontrado.</div>-->
+                        </form>
+                        <div class="row">
+                            <div id="msg" class="col-sm-12">
+                                <!--<div class="alert alert-warning">Produto não encontrado.</div>-->
+                            </div>
                         </div>
                     </div>
                 </div>
+
 
                 <!-- Segunda Coluna -->
 
