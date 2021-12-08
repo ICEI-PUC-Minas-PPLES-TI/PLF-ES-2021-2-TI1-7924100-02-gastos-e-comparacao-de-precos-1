@@ -40,7 +40,7 @@ function generateID() {
 }
 
 const LOGIN_URL = "index.html";
-const HOME_URL = "home.html";
+const HOME_URL = "../Home/index.html";
 
 function startApp() {
   currentUserJSON = sessionStorage.getItem("current_user");
@@ -54,12 +54,6 @@ function startApp() {
   } else {
     localStorage.setItem("db_users", JSON.stringify(db_users))
   }
-}
-
-function logout() {
-  user = {};
-  sessionStorage.setItem("current_user", JSON.stringify(user));
-  window.location = LOGIN_URL;
 }
 
 function verifyLogin() {

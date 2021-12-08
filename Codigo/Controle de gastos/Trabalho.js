@@ -104,7 +104,7 @@ $(function(){
             data: {
                 labels: novaArr,
                 datasets: [{
-                    label: 'Gastos por Dia',
+                    label: 'Gasto recente',
                     data: somaData,
                     backgroundColor: ["#ff2200"]
                 }]
