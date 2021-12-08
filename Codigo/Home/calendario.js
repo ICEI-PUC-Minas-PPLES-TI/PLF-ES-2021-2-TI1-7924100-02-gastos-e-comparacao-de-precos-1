@@ -8,16 +8,12 @@ let dayName = date.toLocaleString(locale, { weekday: 'long' });
 let monthName = date.toLocaleString(locale, { month: 'long' });
 let year = date.getFullYear();
 
-function renderPage () {
-  const newPage = document.createElement('div');
-  newPage.classList.add('page');
-  newPage.innerHTML = `
-    <p class="month">${monthName}</p>
-    <p class="day">${dayNum}</p>
-    <p class="day-name">${dayName}</p>
-    <p class="year">${year}</p>
-  `;
-  pages.appendChild(newPage);
+function renderPage(){
+  let card = document.getElementById('card-calendar')
+  const newCardText = document.createElement('p')
+  newCardText.classList.add('card-text')
+  newCardText.innerHTML = `Hoje é ${dayName}, dia ${dayNum} de ${monthName} de ${year}!`
+  card.appendChild(newCardText)
 }
 
 renderPage();
