@@ -95,7 +95,7 @@ async function getProdutos(){
 
   selectContainer=document.getElementById("selectContainer")
  
-  selectContainer.insertAdjacentHTML('beforeend','<select name="Produto" id="selectProdutos" onchange="ListaProdutos()" class="form-control" id="inputProduto" required>')
+  selectContainer.insertAdjacentHTML('beforeend','<select name="Produto" id="selectProdutos" onchange="ListaProdutos()" class="form-control" id="inputProduto" required> <option value="">Selecione o Produto</option>')
   selectProduto=document.getElementById("selectProdutos")
 
   produtos.forEach(produto => {
@@ -113,7 +113,7 @@ async function getEstabelecimento(){
 
   selectEstabelecimentoContainer=document.getElementById("selectEstabelecimentoContainer")
  
-  selectEstabelecimentoContainer.insertAdjacentHTML('beforeend','<select name="Estabelecimento" onchange="ListaProdutos()" class="form-control" id="selectEstabelecimento" required>')
+  selectEstabelecimentoContainer.insertAdjacentHTML('beforeend','<select name="Estabelecimento" onchange="ListaProdutos()" class="form-control" id="selectEstabelecimento" required><option value="">Selecione o Estabelecimento</option>')
   selectEstabelecimento=document.getElementById("selectEstabelecimento")
 
   estabelecimentos.forEach(estabelecimento => {
