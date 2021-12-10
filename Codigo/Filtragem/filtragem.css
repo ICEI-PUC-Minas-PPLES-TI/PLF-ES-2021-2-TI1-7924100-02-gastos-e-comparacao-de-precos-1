@@ -1,0 +1,38 @@
+label {
+    font-weight: bolder;
+}
+.form-group {
+    padding: 5px;
+}
+
+.titulo{
+    background-color: #ffc107;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+::placeholder {
+    
+    opacity: 3;
+}
+/*::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+    
+
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    
+    opacity:  3;
+ }
+ h1 {
+     text-align: center;
+ }
+ #msg {
+     height: 60px;
+ }
+ #grid-produtos tbody {
+     cursor: pointer;
+ }
+
+ /*color: #80c460 !important;
+ color:  #80c460 !important;
+ color:  #80c460 !important;
