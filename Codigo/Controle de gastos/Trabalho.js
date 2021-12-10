@@ -32,10 +32,13 @@ $(function(){
     }
 
     function Editar(){
+        var data = $("#data").val();
+        let split = data.split('-');
+        let formated = split[2]+"/"+split[1]+"/"+split[0];
         tbClientes[indice_selecionado] = JSON.stringify({
                 Descricao: $("#descricao").val(),
                 Gasto:     $("#gasto").val(),
-                Data:      $("#data").val(),
+                Data:      formated,
                 Categoria: $("#categoria").val()
             });
         localStorage.setItem("tbClientes", JSON.stringify(tbClientes));
@@ -61,6 +64,7 @@ $(function(){
             );
         var soma=0,soma1=0,soma2=0,soma3=0,soma4=0,soma5=0,soma6=0,soma7=0, somaData=[];
         var listaData=[], novaArr=[];
+        dataObject = {}   
          for(var i in tbClientes){
             var cli = JSON.parse(tbClientes[i]);
             $("#tblListar tbody").append("<tr>"+
@@ -86,26 +90,45 @@ $(function(){
                 soma6+= parseFloat(cli.Gasto);
             if(cli.Categoria=="Frios e laticínios")
                 soma7+= parseFloat(cli.Gasto);
-            
-            listaData.push(cli.Data);           
-            novaArr = listaData.filter((este, i) => listaData.indexOf(este) === i);
-            
-            for(var j in novaArr){
-               if(cli.Data == novaArr[j]){
-                    somaData[j] = 0;
-                    somaData[j]+= somaData[j]+ parseFloat(cli.Gasto);
-                }
+
+
+            splitData = cli.Data.split("/")
+            formatedData = new Date(`${splitData[2]}-${splitData[1]}-${splitData[0]}`)
+
+            if (!dataObject[cli.Data]) {
+                dataObject[cli.Data] = parseFloat(cli.Gasto)
+            } else {
+                dataObject[cli.Data] = parseFloat(dataObject[cli.Data]) + parseFloat(cli.Gasto)
             }
          }
+
+         const dias = [] 
+         const quantidadeProduto = []
+         Object.keys(dataObject).map(data => {
+            dias.push(data)
+            quantidadeProduto.push(dataObject[data])
+         })
+
+
+        dias.sort(function(a,b){
+            return new Date(b) - new Date(a);
+        });
+            diasCorretos = []
+            quantidadeCorreta = []
+        dias.map(dia => {
+            diasCorretos.push(dia)
+            quantidadeCorreta.push(dataObject[dia])
+        })
+
 
         let segundoGrafico = document.getElementById('segundoGrafico').getContext('2d');
         let chart2 = new Chart(segundoGrafico, {
             type: 'bar',
             data: {
-                labels: novaArr,
+                labels: diasCorretos,
                 datasets: [{
                     label: 'Gasto recente',
-                    data: somaData,
+                    data: quantidadeCorreta,
                     backgroundColor: ["#ff2200"]
                 }]
             },
@@ -116,6 +139,8 @@ $(function(){
                 }
             }
         });
+
+        console.log({somaData: somaData})
 
         let primeiroGrafico = document.getElementById('primeiroGrafico').getContext('2d');
         let chart = new Chart(primeiroGrafico, {
