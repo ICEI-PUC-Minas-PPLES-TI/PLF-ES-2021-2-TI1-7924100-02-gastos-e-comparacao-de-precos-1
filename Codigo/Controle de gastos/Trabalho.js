@@ -18,7 +18,7 @@ $(function(){
         let formated = split[2]+"/"+split[1]+"/"+split[0];
 
          var cliente = JSON.stringify({
-            Descrição: $("#descricao").text(),
+            Descricao: $("#descricao").val(),
             Gasto:     $("#gasto").val(),
             Data:      formated,
             Categoria: $("#categoria").val()
@@ -33,7 +33,7 @@ $(function(){
 
     function Editar(){
         tbClientes[indice_selecionado] = JSON.stringify({
-                Descrição: $("#descricao").val(),
+                Descricao: $("#descricao").val(),
                 Gasto:     $("#gasto").val(),
                 Data:      $("#data").val(),
                 Categoria: $("#categoria").val()
@@ -156,7 +156,7 @@ $(function(){
         operacao = "E";
         indice_selecionado = parseInt($(this).attr("alt"));
         var cli = JSON.parse(tbClientes[indice_selecionado]);
-        $("#descricao").text(cli.Descricao);
+        $("#descricao").val(cli.Descricao);
         $("#gasto").val(cli.Gasto);
         $("#data").val(cli.Data);
         $("#categoria").val(cli.Categoria);
