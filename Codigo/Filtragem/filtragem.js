@@ -67,7 +67,8 @@ var db_estoque_inicial = {
     },
     {
       id: 9,
-      produto: "Leite Longa Vida Integral - Supermercado BH - Laticínios e Ovos",
+      produto:
+        "Leite Longa Vida Integral - Supermercado BH - Laticínios e Ovos",
       estabelecimento: "Supermercado BH",
       valor: "R$ 3,39",
       quantidade: "24",
@@ -90,38 +91,48 @@ if (!db) {
   db = db_estoque_inicial;
 }
 
-async function getProdutos(){
+async function getProdutos() {
   produtos = await JSON.parse(localStorage.getItem("db_produto")).data;
 
-  selectContainer=document.getElementById("selectContainer")
- 
-  selectContainer.insertAdjacentHTML('beforeend','<select name="Produto" id="selectProdutos" onchange="ListaProdutos()" class="form-control" id="inputProduto" required> <option value="">Selecione o Produto</option>')
-  selectProduto=document.getElementById("selectProdutos")
+  selectContainer = document.getElementById("selectContainer");
 
-  produtos.forEach(produto => {
-    console.log(produto)
-    let option = document.createElement("option")
-    option.value = `${produto.nome} - ${produto.fabricante} - ${produto.categoria}`
-    option.text = `${produto.nome} - ${produto.fabricante} - ${produto.categoria}`
-    selectProduto.appendChild(option)
-  })
+  selectContainer.insertAdjacentHTML(
+    "beforeend",
+    '<select name="Produto" id="selectProdutos" onchange="ListaProdutos()" class="form-control" id="inputProduto" required> <option value="">Selecione o Produto</option>'
+  );
+  selectProduto = document.getElementById("selectProdutos");
+
+  produtos.forEach((produto) => {
+    console.log(produto);
+    let option = document.createElement("option");
+    option.value = `${produto.nome} - ${produto.fabricante} - ${produto.categoria}`;
+    option.text = `${produto.nome} - ${produto.fabricante} - ${produto.categoria}`;
+    selectProduto.appendChild(option);
+  });
 }
-getProdutos()
+getProdutos();
 
-async function getEstabelecimento(){
-  estabelecimentos = await JSON.parse(localStorage.getItem("db_estabelecimento")).data;
+async function getEstabelecimento() {
+  estabelecimentos = await JSON.parse(
+    localStorage.getItem("db_estabelecimento")
+  ).data;
 
-  selectEstabelecimentoContainer=document.getElementById("selectEstabelecimentoContainer")
- 
-  selectEstabelecimentoContainer.insertAdjacentHTML('beforeend','<select name="Estabelecimento" onchange="ListaProdutos()" class="form-control" id="selectEstabelecimento" required><option value="">Selecione o Estabelecimento</option>')
-  selectEstabelecimento=document.getElementById("selectEstabelecimento")
+  selectEstabelecimentoContainer = document.getElementById(
+    "selectEstabelecimentoContainer"
+  );
 
-  estabelecimentos.forEach(estabelecimento => {
-    console.log(estabelecimento)
-    let option = document.createElement("option")
-    option.value = `${estabelecimento.nome} - ${estabelecimento.regiao}`
-    option.text = `${estabelecimento.nome} - ${estabelecimento.regiao}`
-    selectEstabelecimento.appendChild(option)
-  })
+  selectEstabelecimentoContainer.insertAdjacentHTML(
+    "beforeend",
+    '<select name="Estabelecimento" onchange="ListaProdutos()" class="form-control" id="selectEstabelecimento" required><option value="">Selecione o Estabelecimento</option>'
+  );
+  selectEstabelecimento = document.getElementById("selectEstabelecimento");
+
+  estabelecimentos.forEach((estabelecimento) => {
+    console.log(estabelecimento);
+    let option = document.createElement("option");
+    option.value = `${estabelecimento.nome} - ${estabelecimento.regiao}`;
+    option.text = `${estabelecimento.nome} - ${estabelecimento.regiao}`;
+    selectEstabelecimento.appendChild(option);
+  });
 }
-getEstabelecimento()
+getEstabelecimento();

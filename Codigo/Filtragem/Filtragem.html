@@ -13,33 +13,36 @@
 <body onload="init()">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
-          <a class="navbar-brand" href="">Save Money</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collaps d-flex" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../Produtos/Produtos.html">Produtos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../Estabelecimentos/Estabelecimentos.html">Estabelecimentos</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../Estoque/estoque.html">Estoque</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="../Controle de gastos/index.html">Controle de Gastos</a>
-              </li>
-            </ul>
-            </ul>
-          </div>
+            <a class="navbar-brand" href="">Save Money</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collaps d-flex" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Produtos/Produtos.html">Produtos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page"
+                            href="../Estabelecimentos/Estabelecimentos.html">Estabelecimentos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Estoque/estoque.html">Estoque</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../Controle de gastos/index.html">Controle
+                            de Gastos</a>
+                    </li>
+                </ul>
+                </ul>
+            </div>
         </div>
-      </nav>
+    </nav>
     <div class="titulo">
         <h1>Filtragem</h1>
     </div>
@@ -53,13 +56,13 @@
                     <form id="form-estoque">
                         <div class="form-group row">
                             <div id="selectContainer" class="col-sm-12">
-                                <label for="inputProduto">Produto - Fabricante - Categoria (*)</label>
+                                <label for="inputProduto">Produto - Fabricante - Categoria</label>
                                 <!-- <select name="Produto" id="selectProdutos" class="form-control" id="inputProduto" required> -->
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-12" id="selectEstabelecimentoContainer">
-                                <label for="inputEstabelecimento">Estabelecimento (*)</label>
+                                <label for="inputEstabelecimento">Estabelecimento</label>
                             </div>
                         </div>
                     </form>
@@ -107,32 +110,15 @@
     <script src="/Codigo/Filtragem/filtragem.js"></script>
     <script src=""></script>
     <script>
-        function exibeEstoque() {
-            // Remove todas as linhas do corpo da tabela
-            $("#table-estoque").html("");
-
-            // Popula a tabela com os registros do banco de dados
-            for (i = 0; i < db.data.length; i++) {
-                let estoque = db.data[i];
-                // console.log(estoque)
-                $("#table-estoque").append(`<tr><td scope="row">${estoque.id}</td>
-                                                <td>${estoque.produto}</td>
-                                                <td>${estoque.estabelecimento}</td>
-                                                <td>${estoque.valor}</td>
-                                                <td>${estoque.quantidade}</td>
-                                                <td>${estoque.atualizado}</td>
-                                            </tr>`);
-            }
-        }
 
         function init() {
             // Adiciona funções para tratar os eventos
-            exibeEstoque();
+            ListaProdutos();
         }
-        
-               // função para listar na tabela os produtos que estão associados aos filtros 
+
+        // função para listar na tabela os produtos que estão associados aos filtros 
         function ListaProdutos() {
-            
+
             // Obtem os dados informados pelo usuário nos filtros
             let fc = document.getElementById('selectProdutos').value;
             let fcg = document.getElementById('selectEstabelecimento').value;
@@ -147,7 +133,7 @@
                 // Verifica se os dados do produto batem com os filtros
                 if (((estoque.produto == fc) || (fc == '')) &&
                     ((estoque.estabelecimento == fcg) || (fcg == ''))) {
-                    
+
                     // Inclui o produto na tabela    
                     $("#table-estoque").append(`<tr><td scope="row">${estoque.id}</td>
                                                 <td>${estoque.produto}</td>
@@ -158,8 +144,8 @@
                                             </tr>`);
                 }
             }
-
         }
     </script>
 </body>
+
 </html>
