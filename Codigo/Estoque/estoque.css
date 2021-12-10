@@ -1,0 +1,28 @@
+.card, .modal-content {
+    border-radius: 1rem;
+}
+
+.modal-body{
+    margin: 1rem;
+}
+
+.mb-3{
+    padding: 0.5rem;
+}
+
+.error-span {
+    color: rgb(245, 1, 1);
+    font-weight: bold;
+}
+
+.vh-100 {
+    background-color:zz#80c460;
+}
+
+.img-fluid {
+    border-radius: 1rem 0 0 1rem;
+}
+
+.mb-g, .register-label {
+    color: #393f81;
+}
