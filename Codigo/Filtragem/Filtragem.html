@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lista de Produtos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="Filtragem.css">    
+</head>
+
+<body onload="ListaProdutos()">
+    <h1>Filtragem de Produtos</h1>
+
+    <div class="container">
+        <div class="row">
+            <div id="msg" class="col-sm-10 offset-sm-1 ">
+                <!--<div class="alert alert-warning">Contato não encontrado.</div>-->
+            </div>
+        </div>
+
+        <div class="row">
+            <div id="msg" class="col-sm-2 offset-sm-10 ">
+                <a href="/Codigo/Produtos/Produtos.html"><input type="button" class="btn btn-warning" id="btnClear" value="Cadastro"></a>
+            </div>
+        </div>        
+        
+        <form id="form-produto">            
+            <div class="form-group row">
+                <div class="col-sm-6">
+                    <select name="filtro_estabelecimento" id="filtro_estabelecimento" onchange="ListaProdutos()" class="form-control">
+                        <option value="">Selecione o Estabelecimento</option>
+                        <option value="Supermercado BH">Supermercado BH</option>
+                        <option value="Supermercado Carrefour">Supermercado Carrefour</option>
+                        <option value="Supermercado Dia">Supermercado Dia</option>
+                        <option value="Epa Supermercados">Epa Supermercados</option>
+                        <option value="Extra Hipermercado">Extra Hipermercado</option>
+                        <option value="Supermercado Super Nosso">Supermercado Super Nosso</option>
+                        <option value="Supermercado Verde Mar">Supermercado Verde Mar</option>
+                        <option value="Outros">Outros</option>
+
+                    </select>                    
+                </div>
+                <div class="col-sm-6">
+                    <select name="filtro_regiao" id="filtro_regiao" onchange="ListaProdutos()"  class="form-control">
+                        <option value="">Selecione a Região</option>
+                        <option value="Centro">Centro</option>
+                        <option value="Norte">Norte</option>
+                        <option value="Sul">Sul</option>
+                        <option value="Leste">Leste</option>
+                        <option value="Oeste">Oeste</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+
+
+        <div class="row">
+            <div class="col-sm-12">
+                <table id="grid-produtos" class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Nome</th>
+                            <th scope="col">Categoria</th>
+                            <th scope="col">Valor</th>
+                            <th scope="col">Estabelecimento</th>
+                            <th scope="col">Região</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-produtos">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="/Codigo/Produtos/produtos.js"></script>
+    <script>
+        // função para listar na tabela os produtos que estão associados aos filtros 
+        function ListaProdutos() {
+            
+            // Obtem os dados informados pelo usuário nos filtros
+            let fc = document.getElementById('filtro_estabelecimento').value;
+            let fcg = document.getElementById('filtro_regiao').value;
+
+            // limpa a lista de produtos apresentados
+            $("#table-produtos").empty();
+
+            // Popula a tabela com os registros do banco de dados
+            for (let index = 0; index < db.data.length; index++) {
+                const produto = db.data[index];
+
+                // Verifica se os dados do produto batem com os filtros
+                if (((produto.estabelecimento == fc) || (fc == '')) &&
+                    ((produto.regiao == fcg) || (fcg == ''))) {
+                    
+                    // Inclui o produto na tabela    
+                    $("#table-produtos").append(`<tr><td scope="row">${produto.id}</td>
+                                                    <td>${produto.nome}</td>
+                                                    <td>${produto.categoria}</td>
+                                                    <td>${produto.valor}</td>
+                                                    <td>${produto.estabelecimento}</td>
+                                                    <td>${produto.regiao}</td>
+                                                </tr>`);
+                }
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>
