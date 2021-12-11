@@ -26,3 +26,7 @@
 .mb-g, .register-label {
     color: #393f81;
 }
+
+label {
+    font-weight: bolder;
+}

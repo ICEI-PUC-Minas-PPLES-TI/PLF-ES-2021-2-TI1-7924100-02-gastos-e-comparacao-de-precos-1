@@ -1,0 +1,16 @@
+.titulo{
+    background-color: #ffc107;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#navbar-container{
+    margin: 0 80px 0 80px
+}
+
+#img-navbar{
+    margin: 5px;
+    height: 30px;
+}

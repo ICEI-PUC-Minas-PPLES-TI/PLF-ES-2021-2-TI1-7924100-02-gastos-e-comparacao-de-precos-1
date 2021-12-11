@@ -12,6 +12,10 @@ canvas{
 	transform: translate(-50%, -50%);
 	}
 
+.chartjs-render-monitor{
+	margin-top: 70px;
+}
+
 @media (max-width: 320px) {
 	.menu { 
 		width:calc(200% - 15px); 

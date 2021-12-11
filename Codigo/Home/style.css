@@ -1,3 +1,7 @@
+.card-button{
+  font-weight: bold !important;
+}
+
 .titulo{
   background-color: #ffc107;
   width: 100%;
@@ -12,5 +16,13 @@
 
 .card {
   margin-bottom: 20px;
-  height: 170px !important;
+  height: 190px !important;
+}
+
+.card-text {
+  margin: 10px;
+}
+
+.h1 {
+  margin: 15px !important;
 }

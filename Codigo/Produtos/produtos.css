@@ -32,13 +32,6 @@ label {
     margin-bottom: 5px;
 }
 
-.titulo{
-    background-color: #21252994;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 30px;
-}
-
 .col1-container {
     margin: auto;
     display: flex;

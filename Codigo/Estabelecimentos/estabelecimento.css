@@ -5,13 +5,6 @@ label {
     padding: 5px;
 }
 
-.titulo{
-    background-color: #ffc107;
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 30px;
-}
-
 ::placeholder {
     
     opacity: 3;

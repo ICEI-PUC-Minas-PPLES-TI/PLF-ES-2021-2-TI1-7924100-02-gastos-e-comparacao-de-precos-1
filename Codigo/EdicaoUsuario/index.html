@@ -14,11 +14,12 @@
     integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
     crossorigin="anonymous"></script>
   <title>Save Money | Edição de Usuário</title>
+  <link rel="stylesheet" href="../Utils/GlobalCss/global.css">
 </head>
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
+    <div id="navbar-container" class="container-fluid">
       <a class="navbar-brand" href="">Save Money</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,28 +28,42 @@
       <div class="collapse navbar-collaps d-flex" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="../Home/index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="../Produtos/Produtos.html">Produtos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../Estabelecimentos/Estabelecimentos.html">Estabelecimentos</a>
+            <a class="nav-link" active href="../Estabelecimentos/Estabelecimentos.html">Estabelecimentos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../Estoque/estoque.html">Estoque</a>
+            <a class="nav-link" active href="../Estoque/estoque.html">Estoque</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="../Controle de gastos/index.html">Controle de Gastos</a>
+            <a class="nav-link" active href="../Controle de gastos/index.html">Controle de Gastos</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../Filtragem/Filtragem.html">Filtragem</a>
+        </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <img id="img-navbar" src="../Utils/Logo/ImageProfile.png" alt="">
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                <li><a class="dropdown-item" href="../EdicaoUsuario/index.html">Editar Perfil</a></li>
+                <li><a id="logout-btn" class="dropdown-item" href="#">Sair</a></li>
+            </ul>
+        </li>
         </ul>
         </ul>
       </div>
     </div>
   </nav>
 
+  <h1 class="titulo">Edição de Usuário</h1>
   <div class="m-3 p-4" id="form-container">
-    <h1 class="h1 h-auto">Edição de Usuário</h1>
+    <h2 class="h2 h-auto mt-4">Dados Base</h2>
     <form id="form-general-values" class="mb-3">
       <div class="mb-3">
         <label for="input-name" class="form-label">Nome do Usuário</label>
@@ -101,5 +116,6 @@
 
 
   </script>
+  <script src="../Utils/GlobalJs/Global.js"></script>
 
 </html>
