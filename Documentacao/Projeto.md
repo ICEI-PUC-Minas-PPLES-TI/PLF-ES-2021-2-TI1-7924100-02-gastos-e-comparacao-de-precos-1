@@ -17,7 +17,6 @@ Os membros do grupo são:
 * André Fernandez Mendes
 * Guilherme Dantas Caldeira Fagundes
 * Igor Pinheiro dos Santos
-* Leonardo Cesar da Silva
 * Matheus Belo Santos Mello
 
 # Estrutura do Documento
