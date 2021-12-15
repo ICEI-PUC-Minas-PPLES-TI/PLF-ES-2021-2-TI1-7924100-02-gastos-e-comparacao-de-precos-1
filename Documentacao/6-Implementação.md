@@ -4,46 +4,28 @@
 
 ## Tecnologias Utilizadas
 
-> Descreva aqui qual(is) tecnologias você vai usar para resolver o seu
-> problema, ou seja, implementar a sua solução. Liste todas as
-> tecnologias envolvidas, linguagens a serem utilizadas, serviços web,
-> frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-> Apresente também uma figura explicando como as tecnologias estão
-> relacionadas ou como uma interação do usuário com o sistema vai ser
-> conduzida, por onde ela passa até retornar uma resposta ao usuário.
-> 
-> Inclua os diagramas de User Flow, esboços criados pelo grupo
-> (stoyboards), além dos protótipos de telas (wireframes). Descreva cada
-> item textualmente comentando e complementando o que está apresentado
-> nas imagens.
+Ao longo do projeto foram utilizadas ferramentas simples para desenvolvimento da aplicação. O software se fundamenta no uso de HTML5, Bootstrap, JQuery e JavaScript Vanilla. Além disso, é interessante dar um foco ao uso do Canvas, utilizado para o desenvolvimento dos gráficos.
+
+Foi utilizado o Visual Studio Code como IDE de desenvolvimento assim como o GitHub Desktop para controle do versionamento.
+
+![Exemplo de UserFlow](images/DiagramaTecnologias.png)
 
 ## Arquitetura da solução
 
-> Inclua um diagrama da solução e descreva os módulos e as tecnologias
-> que fazem parte da solução. Discorra sobre o diagrama.
+![Exemplo de UserFlow](images/UserFlow.png)
 
-A imagem a seguir ilustra a o fluxo do usuário em nossa solução. Assim
-que o usuário entra na plataforma, ele é apresentado à tela inicial
-(Tela 1) onde ele é confrontado com as opões de editar seu perfil ou
-então visualizar sua galeria.
+O fluxo do usuário se inicia na tela de Login no qual ele pode se cadastrar ou conectar a sua conta caso já possua o cadastro.
 
-Caso ele opte por seguir pelo primeiro caminho (Editar Perfil), ele é
-redirecionado para a tela de edição de perfil (Tela 2), onde pode
-atualizar seus dados cadastrais. Nessa tela, o usuário também pode
-escolher para editar sua foto de perfil. Ao selecionar essa opção, ele é
-redirecionado para a Tela 3, onde ele a imagem expandida do perfil do
-usuário é mostrado. Ao selecionar a opção para atualizar a imagem, uma
-nova janela abre pedindo para o usuário fazer o upload da nova foto.
-Assim que o processo termina um pop-up exibe o status para o usuário
-(Tela 4) e o usuário é redirecionado para a Tela 2.
+Ao acessar com sua conta, ele é redirecionado a Home no qual o usuário pode acessar diversas telas da aplicação.
 
-Caso o usuário opte seguir pelo segundo caminho (Visualizar Galeria) ele
-é redirecionado para a Tela 5 com todas as fotos que o usuário possui. O
-usuário pode clicar em um post qualquer para visualizar os detalhes do
-post (Tela 6). Nessa tela, ele pode então escolher editar o post, sendo
-redirecionado para a Tela 7. Ao editar as informações, o usuário pode
-escolher salvar ou deletar o post. Em ambos os casos o status é
-notificado para o usuário (Tela 8) e em seguida ele é redirecionado
-para a Tela 2.
+Ao clicar em **Controle de Gastos** o usuário é redirecionado para a tela na qual ele pode cadastrar produtos de diversas categorias nas datas desejadas, com o valor e nome desejado.
+Após registrar os produtos, ele pode se direcionar as duas telas adicionais que são **Gastos por Categoria** e **Gastos por Dia**. Ambas funcionam como ferramentas de visualuzação. Na tela de **Gastos por Categoria** o usuário pode ver quais categorias consumiram mais os seus gastos por meio de um gráfico de setor. Já na tela de **Gastos por Dia** a visualização disponibilzada leva em conta o dia cadastrado para cada gasto, mostrando em um gráfico de barras o gasto toal de cada dia.
 
-![Exemplo de UserFlow](images/userflow.jpg)
+Outra tela disponibilizada é a de **Produtos** que permite ao usuário cadastrar, alterar e deletar diversos produtos que ele possui interesse.
+
+Outo caminho possível é a tela de **Estabelecimentos**. Essa tela também funciona como um catálogo de Estabelecimentos que o usuário quer registrar levando em conta o Nome e a Região de cada um deles.
+
+Na tela de **Estoque** é possível o usuário cadastrar uma correlação entre produtos, estabelecimentos e demais valores, assim como editá-los e deletá-los.
+
+Na **Filtragem** o usuário possui a capacidade de filtrar os produtos e ver onde estão disponíveis em cada estabelecimento assim como fazer a filtragem por estabelecimetnos.
+
