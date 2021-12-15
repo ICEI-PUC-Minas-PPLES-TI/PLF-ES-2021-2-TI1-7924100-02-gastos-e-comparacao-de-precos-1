@@ -9,7 +9,6 @@ Permitir ao usuário que conheça os preços de produtos de diversas regiões, v
 * André Fernandez Mendes
 * Guilherme Dantas Caldeira Fagundes
 * Igor Pinheiro dos Santos
-* Leonardo Cesar da Silva
 * Matheus Belo Santos Mello
 
 ## Professores responsáveis

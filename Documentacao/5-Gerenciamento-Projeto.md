@@ -5,11 +5,10 @@ A metologia ágil será utilizada para fazer o controle das demandas e sprints a
 ## Divisão de Papéis
 
 
-- André Fernandez Mendes >> Cadastramento de Produtos / Tela de Estoque
-- Guilherme Dantas Caldeira Fagundes >> Tela de login / Alteração de usuário
-- Igor Pinheiro dos Santos >> Plotagem de Gráfico / Montagem da Home 
-- Leonardo Cesar da Silva >> Tela de Filtragem / Funcionamento da Filtragem e Exibição Dinâmica
-- Matheus Belo Santos Mello >>  Cadastramento de Empresas / Funcionamento do Menu Superior
+- André Fernandez Mendes >> Cadastramento de Produtos / Estoque
+- Guilherme Dantas Caldeira Fagundes >> Login / Edição de usuário
+- Igor Pinheiro dos Santos >> Home / Controle de Gastos
+- Matheus Belo Santos Mello >>  Cadastramento de Estabelecimentos / Filtragem
 
 ## Processo
 
