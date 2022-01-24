@@ -1,0 +1,27 @@
+cff-version: 1.0.1
+message: Please cite this software using these metadata.
+title: Save Money
+authors:
+  - family-names: Fernandez Mendes
+    given-names: André 
+  - family-names: Dantas Caldeira Fagundes 
+    given-names: Guilherme  
+  - family-names: Pinheiro dos Santos
+    given-names: Igor 
+  - family-names: Belo Santos Mello
+    given-names: Matheus 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Dias Ferreira da Rocha
+    given-names: Roberto Felipe 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Vieira Carneiro
+    given-names: Rommel 
+keywords:
+  - Finanças
+  - Busca de Preços
+repository-code: https://github.com/ICEI-PUC-Minas-PPLES-TI/PLF-ES-2021-2-TI1-7924100-02-gastos-e-comparacao-de-precos-1
+license: CC-BY-4.0
+version: 1.0.0
+date-released: 2021-12-22
